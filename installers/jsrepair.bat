@@ -9,9 +9,7 @@ cd %HOMEDRIVE%
 del jellyseerr-main
 wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
 7z x "main.zip" -o%HOMEDRIVE%
-cd %HOMEDRIVE%/jellyseerr-main
-npm install -g win-node-env && yarn install && yarn run build
-cd %HOMEDRIVE%
+start jsinst.bat
 del main.zip
 
 timeout 3
