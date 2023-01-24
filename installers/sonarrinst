@@ -1,0 +1,6 @@
+[Setup]
+Lang=english
+Dir=C:\ProgramData\Sonarr\bin
+Group=Sonarr
+NoIcons=0
+Tasks=desktopicon,startupshortcut
