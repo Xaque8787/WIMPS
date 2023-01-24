@@ -1,6 +1,0 @@
-[Setup]
-Lang=english
-Dir=C:\ProgramData\Prowlarr
-Group=Prowlarr
-NoIcons=0
-Tasks=desktopicon,startupshortcut
