@@ -8,7 +8,7 @@ echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)
 cd C:\jellyseerr-main
 xcopy /i /s /y "config" "%HOMEDRIVE%"
 wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
-del /F /Q /S jellyseerr-main
+del /F /Q /S C:\jellyseerr-main
 7z x "main.zip" -o%HOMEDRIVE%
 cd %HOMEDRIVE%/jellyseerr-main
 npm install -g win-node-env && yarn install && yarn run build
