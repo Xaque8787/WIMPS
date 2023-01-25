@@ -13,7 +13,7 @@ del /F /Q /S C:\jellyseerr-main
 cd %HOMEDRIVE%/jellyseerr-main
 npm install -g win-node-env && yarn install && yarn run build
 cd C:\
-xcopy /i /s /y "config" "%HOMEDRIVE%/jellyseerr-main"
+xcopy /i /s /y "config" "C:\jellyseerr-main"
 
 
 
