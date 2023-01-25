@@ -10,4 +10,5 @@ call npm install -g npm
 call npm install -g win-node-env 
 yarn install && yarn run build
 
-timeout 3
+echo Run jellyseerr with 'jsrun' in elevated command prompt.
+timeout 25
