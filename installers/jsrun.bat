@@ -6,5 +6,5 @@ echo/ \) \ ) _) / (_/\/ (_/\ )  / \___ \ ) _)  ) _)  )   / )   /
 echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)                                                                                 
 
 
-cd %HOMEDRIVE%/jellyseerr-main
+cd C:\jellyseerr-main
 yarn start
