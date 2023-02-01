@@ -10,6 +10,7 @@ wget -O 7zip.exe https://www.7-zip.org/a/7z2201-x64.exe
 wget -O python.exe  https://www.python.org/ftp/python/3.11.1/python-3.11.1-amd64.exe
 wget -O node.msi https://nodejs.org/dist/v18.12.1/node-v18.12.1-x64.msi
 wget -O yarn.msi https://github.com/yarnpkg/yarn/releases/download/v1.22.19/yarn-1.22.19.msi
+call winget install --id=CPUID.CPU-Z -e -h --silent --accept-source-agreements
 
 echo Installing jellyseer repair tool, start cmd, and updater.
 copy "jsrepair.bat" "%SystemRoot%\system32"
