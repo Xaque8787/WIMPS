@@ -27,4 +27,5 @@ xcopy /s /i /y "TV VOD" "%destination%\TV VOD"
 cd %~dp0
 rmdir /s /q "%~dp0Movie VOD"
 rmdir /s /q "%~dp0TV VOD"
+del /s "%~dp0m3u_file.m3u"
 )
