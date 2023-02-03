@@ -6,8 +6,8 @@ echo / \/ \ (__ () \/ (   ) __//    \ )   /\___ \ ) _)  )   /
 echo \_)(_/(____/\____/  (__)  \_/\_/(__\_)(____/(____)(__\_)
 echo.
 cd %~dp0
-set /p destination=<destination.txt
-set /p vodurl=<vodurl.txt
+set /p destination=<destination.cfg
+set /p vodurl=<vodurl.cfg
 if "%destination%" == "" (
 echo Destination folder not set.
 echo Do you want to set it now?
@@ -19,10 +19,12 @@ start cmd.exe /k m3uinput.bat
 ) else (
 mkdir "%destination%\Movie VOD"
 mkdir "%destination%\TV VOD"
-::wget -O m3u_file.m3u %vodurl%
-::parser.py
-::xcopy /s /i /y "Movie VOD" "%destination%\Movie VOD"
-::xcopy /s /i /y "TV VOD" "%destination%\TV VOD"
-rmdir "%destination%\Movie VOD"
-rmdir "%destination%\TV VOD"
+wget -O m3u_file.m3u %vodurl%
+"%LOCALAPPDATA%\Programs\Python\Python311\python.exe" "%HOMEDRIVE%\m3uparser\parser.py"
+timeout 3
+xcopy /s /i /y "Movie VOD" "%destination%\Movie VOD"
+xcopy /s /i /y "TV VOD" "%destination%\TV VOD"
+cd %~dp0
+rmdir /s /q "%~dp0Movie VOD"
+rmdir /s /q "%~dp0TV VOD"
 )
