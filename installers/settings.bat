@@ -20,7 +20,7 @@ set "checkApp2=m3uparser"
 for /L %%i in (1,1,!i!) do (
 if "!appname[%%i]!" == "%checkApp1%" (
 if "!appval[%%i]!" == "false" (
-::echo %checkApp1% appval is false, executing action
+
 choice /C YN /M "Caddy requires a reverse proxy, set this up now?"
 if errorlevel 2 (
 goto end
@@ -31,7 +31,7 @@ start cmd.exe /c "%~dp0rproxy.bat"
 )
 if "!appname[%%i]!" == "%checkApp2%" (
     if "!appval[%%i]!" == "false" (
-        ::echo %checkApp2% appval is false, executing action
+        
 
         choice /C YN /M "m3uparser requires a destination folder for VOD media folders and your m3u VOD url. Enter those now?"
 
