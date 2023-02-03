@@ -403,5 +403,6 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
 )
 :next
 echo.> appins.cfg
-echo All is done...
+echo running settings...
+start cmd.exe /c installers\settings.bat
 timeout 5
