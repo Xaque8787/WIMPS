@@ -32,7 +32,9 @@ start cmd.exe /c "%~dp0rproxy.bat"
 if "!appname[%%i]!" == "%checkApp2%" (
     if "!appval[%%i]!" == "false" (
         ::echo %checkApp2% appval is false, executing action
+
         choice /C YN /M "m3uparser requires a destination folder for VOD media folders and your m3u VOD url. Enter those now?"
+
         if errorlevel 2 (
             goto end
         ) else if errorlevel 1 (
@@ -43,4 +45,6 @@ if "!appname[%%i]!" == "%checkApp2%" (
 )
 
 :end
+
 endlocal
+
