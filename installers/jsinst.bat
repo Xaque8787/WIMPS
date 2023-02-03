@@ -6,8 +6,6 @@ echo/ \) \ ) _) / (_/\/ (_/\ )  / \___ \ ) _)  ) _)  )   / )   /
 echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)                                                                                 
 
 cd C:\jellyseerr-main
-call npm install -g npm 
-call npm install -g win-node-env 
 call yarn install && call yarn run build
 
 echo Run jellyseerr with 'jsrun' in elevated command prompt.
