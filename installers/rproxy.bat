@@ -64,6 +64,6 @@ del caddyfile.tmp
 
 echo Configuration written to caddyfile.
 
-::call caddy fmt --overwrite && call caddy adapt
+call caddy fmt --overwrite && call caddy adapt
 
 timeout 3
