@@ -12,7 +12,7 @@ set /p destination=
 echo m3u VOD URL?
 set /p vodurl=
 
-echo %destination%|find /v "" > destination.txt
-echo %vodurl%|find /v "" > vodurl.txt
+echo %destination%|find /v "" > destination.cfg
+echo %vodurl%|find /v "" > vodurl.cfg
 
 start cmd.exe /k m3uparserrun.bat
