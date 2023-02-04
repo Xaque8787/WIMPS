@@ -11,7 +11,7 @@ wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
 del /F /Q /S C:\jellyseerr-main
 7z x "main.zip" -o%HOMEDRIVE%
 cd %HOMEDRIVE%/jellyseerr-main
-npm install -g win-node-env && call yarn install && ccall yarn run build
+call yarn install && call yarn run build
 cd C:\
 xcopy /i /s /y "config" "C:\jellyseerr-main"
 
