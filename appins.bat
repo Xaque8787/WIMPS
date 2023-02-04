@@ -386,7 +386,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="jellyseerr" (
         echo Installing jellyseerr
-	npm install -g npm && npm install -g win-node-env
+	start cmd.exe /c installers\nodeinstall
 	start cmd.exe /c installers\jellyseerr.bat
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
