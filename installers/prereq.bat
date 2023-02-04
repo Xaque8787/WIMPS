@@ -33,3 +33,4 @@ del 7zip.exe
 del node.msi
 del yarn.msi
 del python.exe
+call "%~dp0nodeinstall.bat"
