@@ -21,7 +21,7 @@ for /L %%i in (1,1,!i!) do (
 if "!appname[%%i]!" == "%checkApp1%" (
 if "!appval[%%i]!" == "false" (
 
-choice /C YN /M "Caddy requires a reverse proxy, set this up now?"
+choice /C YN /M "Caddy requires information to set up reverse proxy, enter this info now?"
 if errorlevel 2 (
 goto end
 ) else if errorlevel 1 (
@@ -33,7 +33,7 @@ if "!appname[%%i]!" == "%checkApp2%" (
     if "!appval[%%i]!" == "false" (
         
 
-        choice /C YN /M "m3uparser requires a destination folder for VOD media folders and your m3u VOD url. Enter those now?"
+        choice /C YN /M "m3uparser requires a destination folder for VOD media folders, and your m3u VOD url. Enter those now?"
 
         if errorlevel 2 (
             goto end
