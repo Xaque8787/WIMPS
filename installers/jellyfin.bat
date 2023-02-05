@@ -9,7 +9,7 @@ wget https://repo.jellyfin.org/releases/server/windows/stable/combined/jellyfin_
 7z x "jellyfin_10.8.9.zip" -o%CD%
 mkdir "%PROGRAMFILES%\Jellyfin"
 mkdir "%PROGRAMFILES%\Jellyfin\Server"
-
+mkdir "%PROGRAMDATA%\Jellyfin"
 xcopy /s /i /y "jellyfin_10.8.9" "%PROGRAMFILES%\Jellyfin\Server"
 
 cd "%PROGRAMFILES%\Jellyfin\Server"
