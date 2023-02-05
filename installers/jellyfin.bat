@@ -5,7 +5,16 @@ echo _(  )(  __)(  )  (  )  ( \/ )(  __)(  )(  ( \
 echo/ \) \ ) _) / (_/\/ (_/\ )  /  ) _)  )( /    /
 echo\____/(____)\____/\____/(__/  (__)  (__)\_)__)                                                                                 
 
-wget -O jellyfin.exe https://github.com/jellyfin/jellyfin-server-windows/releases/download/10.8.9/jellyfin_10.8.9_windows-x64.exe
-jellyfin.exe
-timeout 3
-del jellyfin.exe
+wget https://repo.jellyfin.org/releases/server/windows/stable/combined/jellyfin_10.8.9.zip
+7z x "jellyfin_10.8.9.zip" -o%CD%
+mkdir "%PROGRAMFILES%\Jellyfin"
+mkdir "%PROGRAMFILES%\Jellyfin\Server"
+
+xcopy /s /i /y "jellyfin_10.8.9" "%PROGRAMFILES%\Jellyfin\Server"
+
+cd "%PROGRAMFILES%\Jellyfin\Server"
+call nssm.exe install JellyfinServer "%PROGRAMFILES%\Jellyfin\Server\jellyfin.exe" --service --datadir "%PROGRAMDATA%\Jellyfin"
+call nssm.exe start JellyfinServer
+cd %~dp0
+del jellyfin_10.8.9.zip
+timeout 4
