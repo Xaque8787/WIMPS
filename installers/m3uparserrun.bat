@@ -9,8 +9,8 @@ cd %~dp0
 set /p destination=<destination.cfg
 set /p vodurl=<vodurl.cfg
 if "%destination%" == "" (
-echo Destination folder not set.
-echo Do you want to set it now?
+echo Destination folder and VOD url not set.
+echo Do you want to set them now?
 echo 1. Set Destination
 echo 2. Exit
 choice /c 12 /n /m "Enter your selection (1 or 2):"
