@@ -387,7 +387,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     if "!appname!"=="jellyseerr" (
         echo Installing jellyseerr
 	start cmd.exe /c installers\nodeinstall.bat
-	timeout 15
+	timeout 25
 	start cmd.exe /c installers\jellyseerr.bat
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
