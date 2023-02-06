@@ -16,5 +16,5 @@ cd "%PROGRAMFILES%\Jellyfin\Server"
 call nssm.exe install JellyfinServer "%PROGRAMFILES%\Jellyfin\Server\jellyfin.exe" --service --datadir "%PROGRAMDATA%\Jellyfin"
 call nssm.exe start JellyfinServer
 cd %~dp0
-del jellyfin_10.8.9.zip
+rmdir /s /q "%~dp0jellyfin_10.8.9.zip"
 timeout 4
