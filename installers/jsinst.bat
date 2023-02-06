@@ -6,7 +6,7 @@ echo/ \) \ ) _) / (_/\/ (_/\ )  / \___ \ ) _)  ) _)  )   / )   /
 echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)                                                                                 
 
 cd C:\jellyseerr-main
-call yarn install && call yarn run build
+yarn install && yarn run build
 
 echo Run jellyseerr with 'jsrun' in elevated command prompt.
 timeout 25
