@@ -10,6 +10,6 @@ rmdir /s /q C:\jellyseerr-main
 wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
 7z x "main.zip" "-o%HOMEDRIVE%"
 start jsinst.bat
-del main.zip
+del /s main.zip
 
 timeout 3
