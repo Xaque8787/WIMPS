@@ -8,10 +8,10 @@ echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)
 cd C:\jellyseerr-main
 xcopy /i /s /y "config" "%HOMEDRIVE%"
 wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
-del /F /Q /S C:\jellyseerr-main
+rmdir /s /q C:\jellyseerr-main
 7z x "main.zip" -o%HOMEDRIVE%
 cd %HOMEDRIVE%/jellyseerr-main
-call yarn install && call yarn run build
+yarn install && yarn run build
 cd C:\
 xcopy /i /s /y "config" "C:\jellyseerr-main"
 
