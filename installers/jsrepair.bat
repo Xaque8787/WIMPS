@@ -6,7 +6,7 @@ echo/ \) \ ) _) / (_/\/ (_/\ )  / \___ \ ) _)  ) _)  )   / )   /
 echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)                                                                                 
 
 cd C:\
-del /F /Q /S C:\jellyseerr-main
+rmdir /s /q C:\jellyseerr-main
 wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
 7z x "main.zip" "-o%HOMEDRIVE%"
 start jsinst.bat
