@@ -17,6 +17,8 @@ choice /c 12 /n /m "Enter your selection (1 or 2):"
 if errorlevel 2 exit
 start cmd.exe /k m3uinput.bat
 ) else (
+rmdir /s /q "%destination%\Movie VOD"
+rmdir /s /q "%destination%\TV VOD"
 mkdir "%destination%\Movie VOD"
 mkdir "%destination%\TV VOD"
 wget -O m3u_file.m3u %vodurl%
