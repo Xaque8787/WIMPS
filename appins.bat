@@ -405,6 +405,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     )
 )
 :next
+copy /y "mainlist.cfg" "installers\mainlist.cfg"
 echo.> appins.cfg
 echo running settings...
 start cmd.exe /c installers\settings.bat
