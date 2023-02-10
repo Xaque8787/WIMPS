@@ -10,86 +10,6 @@ for /f "tokens=1,2 delims==" %%a in (mainlist.cfg) do (
     set "appval[!i!]=%%b"
 )
 
-rem Check if arguments were passed
-if "%1" == "selectall" (
-    rem Set all apps to selected
-    for /L %%i in (1,1,%i%) do (
-        set "appvar=sel_!appname[%%i]!"
-        set "!appvar!=1"
-    )
-    echo All apps will be installed.
-)
-if "%1" == "all" (
-    rem Set all apps to selected
-    for /L %%i in (1,1,%i%) do (
-        set "appvar=sel_!appname[%%i]!"
-        set "!appvar!=1"
-    )
-    echo All apps will be installed.
-    set "selectedApps="
-    for /L %%i in (1,1,%i%) do (
-        set "app=!appname[%%i]!"
-        set "appvar=sel_!app!"
-        if defined !appvar! (
-            set "selectedApps=!selectedApps! !app!"
-        )
-    )
-
-    echo Writing variables to appins.cfg...
-    for /L %%i in (1,1,%i%) do (
-        set "app=!appname[%%i]!"
-        set "appvar=sel_!app!"
-        if defined !appvar! (
-            echo !app!=true >> appins.cfg
-        )
-    )
-
-    for /L %%i in (1,1,%i%) do (
-        set "app=!appname[%%i]!"
-        set "appvar=sel_!app!"
-        if defined !appvar! (
-            set "!appvar!"=
-        )
-    )
-
-    echo Running appins.bat...
-    timeout /t 3
-    call appins.bat
-    exit /b
-)
-)
-if "%2" == "install" (
-    set "selectedApps="
-    for /L %%i in (1,1,%i%) do (
-        set "app=!appname[%%i]!"
-        set "appvar=sel_!app!"
-        if defined !appvar! (
-            set "selectedApps=!selectedApps! !app!"
-        )
-    )
-
-    echo Writing variables to appins.cfg...
-    for /L %%i in (1,1,%i%) do (
-        set "app=!appname[%%i]!"
-        set "appvar=sel_!app!"
-        if defined !appvar! (
-            echo !app!=true >> appins.cfg
-        )
-    )
-
-    for /L %%i in (1,1,%i%) do (
-        set "app=!appname[%%i]!"
-        set "appvar=sel_!app!"
-        if defined !appvar! (
-            set "!appvar!"=
-        )
-    )
-
-    echo Running appins.bat...
-    timeout /t 3
-    call appins.bat
-    exit /b
-)
 
 :menu
 cls
@@ -116,7 +36,7 @@ for /L %%i in (1,1,%i%) do (
     set /A counter+=1
 )
 echo !counter!. Exit
-echo Select All
+echo All
 echo Install
 
 
@@ -125,34 +45,16 @@ echo Install
 set "choice="
 set /p choice=Enter choice:
 
-if /i "%choice%" == "selectall" (
+if /i "%choice%" == "all" (
     set "appvar=sel_!appname[%%i]!"
     set "!appvar!=1"
     for /L %%i in (1,1,%i%) do (
         set "appvar=sel_!appname[%%i]!"
         set "!appvar!=1"
     )
-    echo All apps will be installed.
-    goto menu
-) else if /i "%choice%" == "select all" (
-    set "appvar=sel_!appname[%%i]!"
-    set "!appvar!=1"
-    for /L %%i in (1,1,%i%) do (
-        set "appvar=sel_!appname[%%i]!"
-        set "!appvar!=1"
-    )
-    echo All apps will be installed.
-    goto menu
-) else if /i "%choice%" == "all" (
-    set "appvar=sel_!appname[%%i]!"
-    set "!appvar!=1"
-    for /L %%i in (1,1,%i%) do (
-        set "appvar=sel_!appname[%%i]!"
-        set "!appvar!=1"
-    )
-    echo All apps will be installed.
-    goto menu
-    )
+
+goto menu
+)
 rem Set the selected app or perform action
 if /i "%choice%" == "install" (
     set "selectedApps="
