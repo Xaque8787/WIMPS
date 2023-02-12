@@ -9,4 +9,3 @@ wget -O radarr.exe https://github.com/Radarr/Radarr/releases/download/v4.2.4.663
 radarr.exe /VERYSILENT /SUPPRESSMSGBOXES /LOADINF="radarrinst" /LOG /NORESTART /LANG=en
 timeout 3
 del radarr.exe
-del radarrinst
