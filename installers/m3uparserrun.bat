@@ -24,11 +24,9 @@ mkdir "%destination%\TV VOD"
 wget -O m3u_file.m3u %vodurl%
 "%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEDRIVE%\m3uparser\parser.py"
 timeout 3
-xcopy /s /i /y "Movie VOD" "%destination%\Movie VOD"
-xcopy /s /i /y "TV VOD" "%destination%\TV VOD"
+move /y "Movie VOD" "%destination%\"
+move /y "TV VOD" "%destination%\"
 cd %~dp0
-rmdir /s /q "%~dp0Movie VOD"
-rmdir /s /q "%~dp0TV VOD"
 
 del /s "%~dp0m3u_file.m3u"
 
