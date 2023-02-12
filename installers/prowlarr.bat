@@ -9,4 +9,3 @@ wget -O prowlarr.exe https://github.com/Prowlarr/Prowlarr/releases/download/v1.0
 prowlarr.exe /VERYSILENT /SUPPRESSMSGBOXES /LOADINF="prowlarrinst" /LOG /NORESTART /LANG=en
 timeout 3
 del prowlarr.exe
-del prowlarrinst
