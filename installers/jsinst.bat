@@ -6,6 +6,7 @@ echo/ \) \ ) _) / (_/\/ (_/\ )  / \___ \ ) _)  ) _)  )   / )   /
 echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)                                                                                 
 
 cd C:\jellyseerr-main
+call "%PROGRAMFILES%\nodejs\nodevars.bat"
 yarn install && yarn run build
 
 echo Run jellyseerr with 'jsrun' in elevated command prompt.
