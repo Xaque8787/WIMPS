@@ -19,8 +19,8 @@ start cmd.exe /k m3uinput.bat
 ) else (
 rmdir /s /q "%destination%\Movie VOD"
 rmdir /s /q "%destination%\TV VOD"
-mkdir "%destination%\Movie VOD"
-mkdir "%destination%\TV VOD"
+rem mkdir "%destination%\Movie VOD"
+rem mkdir "%destination%\TV VOD"
 wget -O m3u_file.m3u %vodurl%
 "%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEDRIVE%\m3uparser\parser.py"
 timeout 3
