@@ -3,4 +3,4 @@ Lang=english
 Dir=C:\ProgramData\Radarr
 Group=Radarr
 NoIcons=0
-Tasks=desktopicon,startupshortcut
+Tasks=desktopicon,windowsservice
