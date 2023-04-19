@@ -20,7 +20,7 @@ noteplus=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/downloa
 
 python=https://www.python.org/ftp/python/3.11.1/python-3.11.1-amd64.exe
 
-nodejs=https://nodejs.org/dist/v18.12.1/node-v18.12.1-x64.msi
+nodejs=https://nodejs.org/dist/v20.0.0/node-v20.0.0-x64.msi
 
 yarn=https://github.com/yarnpkg/yarn/releases/download/v1.22.19/yarn-1.22.19.msi
 
