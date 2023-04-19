@@ -30,7 +30,7 @@ prowlarr=https://github.com/Prowlarr/Prowlarr/releases/download/v1.0.0.2171/Prow
 
 qbittorrent=https://pilotfiber.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-4.5.0/qbittorrent_4.5.0_lt20_qt6_x64_setup.exe
 
-radarr=https://github.com/Radarr/Radarr/releases/download/v4.2.4.6635/Radarr.master.4.2.4.6635.windows-core-x64-installer.exe
+radarr=https://github.com/Radarr/Radarr/releases/download/v4.4.4.7068/Radarr.master.4.4.4.7068.windows-core-x64-installer.exe
 
 sabnzb=https://github.com/sabnzbd/sabnzbd/releases/download/3.7.2/SABnzbd-3.7.2-win-setup.exe
 
