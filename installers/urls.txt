@@ -24,7 +24,7 @@ nodejs=https://nodejs.org/dist/v18.12.1/node-v18.12.1-x64.msi
 
 yarn=https://github.com/yarnpkg/yarn/releases/download/v1.22.19/yarn-1.22.19.msi
 
-protonvpn=https://github.com/ProtonVPN/win-app/releases/download/2.3.1/ProtonVPN_win_v2.3.1.exe
+protonvpn=https://github.com/ProtonVPN/win-app/releases/download/2.4.1/ProtonVPN_win_v2.4.1.exe
 
 prowlarr=https://github.com/Prowlarr/Prowlarr/releases/download/v1.0.0.2171/Prowlarr.develop.1.0.0.2171.windows-core-x64-installer.exe
 
@@ -32,7 +32,7 @@ qbittorrent=https://pilotfiber.dl.sourceforge.net/project/qbittorrent/qbittorren
 
 radarr=https://github.com/Radarr/Radarr/releases/download/v4.2.4.6635/Radarr.master.4.2.4.6635.windows-core-x64-installer.exe
 
-sabnzb=https://github.com/sabnzbd/sabnzbd/releases/download/3.7.1/SABnzbd-3.7.1-win-setup.exe
+sabnzb=https://github.com/sabnzbd/sabnzbd/releases/download/3.7.2/SABnzbd-3.7.2-win-setup.exe
 
 sonarr=https://download.sonarr.tv/v3/main/3.0.9.1549/Sonarr.main.3.0.9.1549.windows.exe
 
