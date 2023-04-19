@@ -1,4 +1,5 @@
 @echo off
+cd %~dp0
 setlocal enabledelayedexpansion
 echo / )( \(  _ \(  )     / __)/ )( \(  __)/ __)(  / )
 echo ) \/ ( )   // (_/\  ( (__ ) __ ( ) _)( (__  )  ( 
