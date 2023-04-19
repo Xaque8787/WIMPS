@@ -6,7 +6,7 @@ duckdns=https://github.com/XWolfOverride/DuckDNS/releases/download/2.2b/DuckDNS.
 
 eventghost=https://github.com/EventGhost/EventGhost/releases/download/v0.4.1.r1722/EventGhost_0.4.1.r1722_Setup.exe
 
-firefox=https://ftp.mozilla.org/pub/firefox/releases/109.0/win64/en-US/Firefox Setup 109.0.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/112.0.1/win64/en-US/Firefox 20Setup 20112.0.1.exe
 
 jellyfin=https://repo.jellyfin.org/releases/server/windows/stable/installer/jellyfin_10.8.9_windows-x64.exe
 
