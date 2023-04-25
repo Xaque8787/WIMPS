@@ -7,6 +7,7 @@ echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)
 
 cd C:\jellyseerr-main
 xcopy /i /s /y "config" "%HOMEDRIVE%"
+cd C:\
 wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
 rmdir /s /q C:\jellyseerr-main
 7z x "main.zip" -o%HOMEDRIVE%
