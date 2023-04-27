@@ -6,7 +6,7 @@ echo/ \) \ ) _) / (_/\/ (_/\ )  / \___ \ ) _)  ) _)  )   / )   /
 echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)                                                                                 
 
 cd C:\jellyseerr-main
-xcopy /i /s /y "config" "%HOMEDRIVE%"
+move /y config C:\
 cd C:\
 wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
 rmdir /s /q C:\jellyseerr-main
@@ -14,8 +14,7 @@ rmdir /s /q C:\jellyseerr-main
 cd %HOMEDRIVE%/jellyseerr-main
 yarn install && yarn run build
 cd C:\
-xcopy /i /s /y "config" "C:\jellyseerr-main"
-
+move /y config C:\jellyseerr-main
 
 
 timeout 3
