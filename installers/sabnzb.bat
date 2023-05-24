@@ -5,7 +5,7 @@ echo/ ___) / _\ (  _ \(  ( \(__  )(  _ \
 echo\___ \/    \ ) _ (/    / / _/  ) _ (
 echo(____/\_/\_/(____/\_)__)(____)(____/                                                                                 
 
-wget -O sabnzb.exe https://github.com/sabnzbd/sabnzbd/releases/download/3.7.2/SABnzbd-3.7.2-win-setup.exe
+wget -O sabnzb.exe https://github.com/sabnzbd/sabnzbd/releases/download/4.0.1/SABnzbd-4.0.1-win-setup.exe
 sabnzb.exe /S
 timeout 3
 del sabnzb.exe
