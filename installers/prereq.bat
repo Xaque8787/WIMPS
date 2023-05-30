@@ -8,7 +8,7 @@ echo(__)  (__\_)(____)   (__\_)(____)\__\)(____/
 
 wget -O 7zip.exe https://www.7-zip.org/a/7z2201-x64.exe
 wget -O python.exe  https://www.python.org/ftp/python/3.11.1/python-3.11.1-amd64.exe
-wget -O node.msi https://nodejs.org/dist/latest/node-v20.0.0-x64.msi
+wget -O node.msi https://nodejs.org/dist/latest/node-v20.2.0-x64.msi
 wget -O yarn.msi https://github.com/yarnpkg/yarn/releases/download/v1.22.19/yarn-1.22.19.msi
 call winget install --id=CPUID.CPU-Z -e -h --silent --accept-source-agreements
 
