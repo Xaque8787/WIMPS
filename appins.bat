@@ -9,7 +9,7 @@ set "appname=%%a"
 set "appvalue=%%b"
 if "!appvalue!"=="true" (
 Echo Installing pre requirements
-move "%~dp0\Installers\wget.exe" "%SystemRoot%\system32"
+rem move "%~dp0\Installers\wget.exe" "%SystemRoot%\system32"
 copy /y "mainlist.cfg" "installers\mainlist.cfg"
 start cmd.exe /c installers\prereq.bat
 set "newline=!appname!=false"
