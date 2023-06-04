@@ -2,6 +2,7 @@
 
 rem Read the mainlist.txt file into memory
 cd %~dp0
+move "%~dp0\Installers\wget.exe" "%SystemRoot%\system32"
 setlocal enableDelayedExpansion
 set i=0
 for /f "tokens=1,2 delims==" %%a in (mainlist.cfg) do (
