@@ -23,12 +23,13 @@ if "!appval[%%i]!" == "false" (
 
 choice /C YN /M "Caddy requires information to set up reverse proxy, enter this info now?"
 if errorlevel 2 (
-goto end
+goto m3u
 ) else if errorlevel 1 (
 start cmd.exe /c "%~dp0rproxy.bat"
 )
 )
 )
+:m3u
 if "!appname[%%i]!" == "%checkApp2%" (
     if "!appval[%%i]!" == "false" (
         
