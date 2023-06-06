@@ -12,5 +12,5 @@ call "C:\Program Files (x86)\Yarn\bin\yarn.bat" install
 call "C:\Program Files (x86)\Yarn\bin\yarn.bat" run build
 rem yarn install && yarn run build
 
-echo Run jellyseerr with 'jsrun' in elevated command prompt.
+echo Run jellyseerr with 'jsrun' in command prompt.
 timeout 25
