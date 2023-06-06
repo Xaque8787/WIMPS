@@ -26,6 +26,7 @@ if errorlevel 2 (
 goto m3u
 ) else if errorlevel 1 (
 start cmd.exe /c "%~dp0rproxy.bat"
+goto m3u
 )
 )
 )
