@@ -1,6 +1,6 @@
 @echo off
 rem define the appnames
-set appnames=jellyfin radarr sonarr prowlarr jellyseerr qbittorrent sabnzb caddy protonvpn jfa eventghost noteplus prereqs duckdns m3uparser windirstat chrome firefox
+set appnames=jellyfin radarr sonarr prowlarr jellyseerr qbittorrent sabnzb caddy protonvpn jfa eventghost noteplus prereqs duckdns m3uparser windirstat chrome firefox threadfin
 setlocal enabledelayedexpansion
 
 :prereq
@@ -400,10 +400,36 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         del mainlist.cfg
         ren temp.txt mainlist.cfg
 	timeout 100
+        goto threadfin
+
+    )
+)
+
+:threadfin
+for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
+    set "appname=%%a"
+    set "appvalue=%%b"
+    if "!appname!"=="jellyseerr" (
+        echo Installing jellyseerr
+	start cmd.exe /c installers\nodeinstall.bat
+	timeout 25
+	start cmd.exe /c installers\jellyseerr.bat
+	set "newline=!appname!=false"
+        (for /f "delims=" %%x in (mainlist.cfg) do (
+            if "%%x"=="!appname!=true" (
+                echo !newline!
+            ) else (
+                echo %%x
+            )
+        ))>temp.txt
+        del mainlist.cfg
+        ren temp.txt mainlist.cfg
+	timeout 100
         goto next
 
     )
 )
+
 :next
 copy /y "mainlist.cfg" "installers\mainlist.cfg"
 echo.> appins.cfg
