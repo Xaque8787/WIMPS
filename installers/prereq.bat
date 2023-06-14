@@ -11,7 +11,7 @@ wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --
 wget -O node.msi https://nodejs.org/dist/latest/node-v20.2.0-x64.msi
 wget -O yarn.msi https://github.com/yarnpkg/yarn/releases/download/v1.22.19/yarn-1.22.19.msi
 wget -O go.msi https://go.dev/dl/go1.20.5.windows-amd64.msi
-call winget install --id=CPUID.CPU-Z -e -h --silent --accept-source-agreements
+rem call winget install --id=CPUID.CPU-Z -e -h --silent --accept-source-agreements
 
 echo Installing jellyseer repair tool, start cmd, and updater.
 copy "jsrepair.bat" "%SystemRoot%\system32"
