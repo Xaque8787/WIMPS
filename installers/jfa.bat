@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color 5
 echo _(  )(  __)/ _\  ___  / __) /  \ 
@@ -10,3 +11,4 @@ mkdir "%HOMEDRIVE%\jfa"
 7z x "jfa.zip" -o%HOMEDRIVE%\jfa
 timeout 3
 del jfa.zip
+exit /b
