@@ -1,4 +1,5 @@
 @echo off
+cls
 color C
 echo  _  _  ____  _  _    __  __ _  ____  __  
 echo ( \/ )( __ \/ )( \  (  )(  ( \(  __)/  \ 
@@ -17,4 +18,4 @@ echo %vodurl%|find /v "" > vodurl.cfg
 
 timeout 3
 start m3uparserrun.bat
-
+exit /b
