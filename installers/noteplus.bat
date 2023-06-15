@@ -1,5 +1,6 @@
 @echo off
 cd %~dp0
+cls
 color A
 echo(  ( \ /  \(_  _)(  __)(  _ \ / _\ (    \ ( )  ( )  
 echo/    /(  O ) )(   ) _)  ) __//    \ ) D ((_ _)(_ _) 
@@ -9,3 +10,4 @@ wget -O noteplus.exe https://github.com/notepad-plus-plus/notepad-plus-plus/rele
 noteplus.exe /S
 timeout 3
 del noteplus.exe
+exit /b
