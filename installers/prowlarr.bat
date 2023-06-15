@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color 4
 echo(  _ \(  _ \ /  \ / )( \(  )   / _\ (  _ \(  _ \
@@ -9,3 +10,4 @@ wget -O prowlarr.exe https://github.com/Prowlarr/Prowlarr/releases/download/v1.3
 prowlarr.exe /VERYSILENT /SUPPRESSMSGBOXES /LOADINF="prowlarrinst" /LOG /NORESTART /LANG=en
 timeout 3
 del prowlarr.exe
+exit /b
