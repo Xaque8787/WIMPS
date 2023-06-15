@@ -1,4 +1,5 @@
 @echo off
+cls
 color A
 echo  ___   __   ____  ____  _  _ 
 echo / __) / _\ (    \(    \( \/ )
