@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color 8
 echo(  __)/ )( \(  __)(  ( \(_  _)   / __)/ )( \ /  \ / ___)(_  _)
@@ -9,3 +10,4 @@ wget -O eventg.exe https://github.com/EventGhost/EventGhost/releases/download/v0
 eventg.exe /VERYSILENT /LOG /NORESTART
 timeout 3
 del eventg.exe
+exit /b
