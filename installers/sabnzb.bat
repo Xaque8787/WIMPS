@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color 6
 echo/ ___) / _\ (  _ \(  ( \(__  )(  _ \
@@ -9,3 +10,4 @@ wget -O sabnzb.exe https://github.com/sabnzbd/sabnzbd/releases/download/4.0.2/SA
 sabnzb.exe /S
 timeout 3
 del sabnzb.exe
+exit /b
