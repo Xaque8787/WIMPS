@@ -1,4 +1,5 @@
 @echo off
+cls
 color 5
 echo _(  )(  __)(  )  (  )  ( \/ )/ ___)(  __)(  __)(  _ \(  _ \
 echo/ \) \ ) _) / (_/\/ (_/\ )  / \___ \ ) _)  ) _)  )   / )   /
@@ -14,3 +15,4 @@ cd %~dp0
 
 timeout 3
 del main.zip
+exit /b
