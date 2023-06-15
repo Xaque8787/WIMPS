@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color 4
 echo(  __)(  )(  _ \(  __)(  __)/  \( \/ )
@@ -9,3 +10,4 @@ wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --
 firefox.exe /S
 timeout 3
 del firefox.exe
+exit /b
