@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color E
 echo(    \/ )( \ / __)(  / )  (    \(  ( \/ ___)
@@ -10,3 +11,4 @@ mkdir "%HOMEDRIVE%\duckdns"
 7z x "%~dp0\duckdns.7z" -o%HOMEDRIVE%\duckdns
 timeout 3
 del duckdns.7z
+exit /b
