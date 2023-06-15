@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color 5
 echo _(  )(  __)(  )  (  )  ( \/ )(  __)(  )(  ( \
@@ -19,3 +20,4 @@ cd %~dp0
 rmdir /s /q "%~dp0jellyfin_10.8.10"
 del /s "%~dp0jellyfin_10.8.10.zip"
 timeout 4
+exit /b
