@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color 8
 echo/ )( \(  )(  ( \(    \(  )(  _ \/ ___)(_  _)/ _\(_  _)
@@ -9,3 +10,4 @@ wget -O windirstat.exe https://windirstat.mirror.wearetriple.com//wds_current_se
 windirstat.exe /S
 timeout 3
 del windirstat.exe
+exit /b
