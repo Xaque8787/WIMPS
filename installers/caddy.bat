@@ -1,6 +1,6 @@
 @echo off
 cls
-cd /installers
+cd %~dp0
 color A
 echo  ___   __   ____  ____  _  _ 
 echo / __) / _\ (    \(    \( \/ )
