@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color C
 echo(  _ \(  _ \(  __)___(  _ \(  __)/  \ / ___)
@@ -40,3 +41,4 @@ timeout 20
 call "%PROGRAMFILES%\nodejs\nodevars.bat"
 call npm install -g npm && call npm install -g win-node-env
 echo All Pre-Reqs installed.
+exit /b
