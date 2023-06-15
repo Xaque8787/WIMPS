@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color B
 echo /  \ (  _ \(  )(_  _)(_  _)/  \(  _ \(  _ \(  __)(  ( \(_  _)
@@ -9,3 +10,4 @@ wget -O qbit.exe https://sourceforge.net/projects/qbittorrent/files/qbittorrent-
 qbit.exe /S
 timeout 3
 del qbit.exe
+exit /b
