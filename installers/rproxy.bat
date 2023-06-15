@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-@echo off
+cls
 cd %~dp0
 color A
 echo  ____  ____  _  _  ____  ____  ____  ____    ____  ____   __  _  _  _  _ 
@@ -70,3 +70,4 @@ call caddy fmt --overwrite && call caddy adapt
 
 
 timeout 3
+exit /b
