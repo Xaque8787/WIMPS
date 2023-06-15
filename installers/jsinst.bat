@@ -1,5 +1,5 @@
 @echo off
-
+cls
 color 5
 echo _(  )(  __)(  )  (  )  ( \/ )/ ___)(  __)(  __)(  _ \(  _ \
 echo/ \) \ ) _) / (_/\/ (_/\ )  / \___ \ ) _)  ) _)  )   / )   /
@@ -13,4 +13,5 @@ call "C:\Program Files (x86)\Yarn\bin\yarn.bat" run build
 rem yarn install && yarn run build
 
 echo Run jellyseerr with 'jsrun' in command prompt.
-timeout 25
+timeout 15
+exit /b
