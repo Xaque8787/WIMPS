@@ -1,5 +1,6 @@
 @echo off
-cd %~dp0
+cls
+cd /installers
 color A
 echo  ___   __   ____  ____  _  _ 
 echo / __) / _\ (    \(    \( \/ )
@@ -11,3 +12,4 @@ mkdir "%HOMEDRIVE%\caddy"
 move "caddy.exe" "%HOMEDRIVE%\caddy"
 move "caddyrun.bat" "%HOMEDRIVE%\caddy"
 timeout 3
+exit /b
