@@ -11,7 +11,7 @@ if "!appvalue!"=="true" (
 Echo Installing pre requirements
 rem move "%~dp0\Installers\wget.exe" "%SystemRoot%\system32"
 copy /y "mainlist.cfg" "installers\mainlist.cfg"
-start cmd.exe /c installers\prereq.bat
+start "" /wait /b cmd.exe /c installers\prereq.bat
 set "newline=!appname!=false"
 (for /f "delims=" %%x in (prereq.cfg) do (
 if "%%x"=="!appname!=true" (
@@ -22,7 +22,7 @@ echo %%x
 ))>temp.cfg
 del prereq.cfg
 ren temp.cfg prereq.cfg
-timeout 300
+cls
 ) else (
 goto jellyfin
 )
@@ -35,7 +35,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="jellyfin" (
 	echo Installing jellyfin
-	start cmd.exe /c installers\jellyfin.bat
+	start "" /wait /b cmd.exe /c installers\jellyfin.bat
+	cls
          set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -57,7 +58,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="radarr" (
         echo Installing radarr
-	start cmd.exe /c installers\radarr.bat
+	start "" /wait /b cmd.exe /c installers\radarr.bat
+	cls
          set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -79,7 +81,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="sonarr" (
         echo Installing sonarr
-	start cmd.exe /c installers\sonarr.bat
+	start "" /wait /b cmd.exe /c installers\sonarr.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -101,7 +104,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="prowlarr" (
         echo Installing prowlarr
-	start cmd.exe /c installers\prowlarr.bat
+	start "" /wait /b cmd.exe /c installers\prowlarr.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -123,7 +127,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="duckdns" (
         echo Installing duckdns
-	start cmd.exe /c installers\duckdns.bat
+	start "" /wait /b cmd.exe /c installers\duckdns.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -144,7 +149,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="qbittorrent" (
         echo install qbit
-	start cmd.exe /c installers\qbit.bat
+	start "" /wait /b cmd.exe /c installers\qbit.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -166,7 +172,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="sabnzb" (
         echo Installing sabnzb
-	start cmd.exe /c installers\sabnzb.bat
+	start "" /wait /b cmd.exe /c installers\sabnzb.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -188,7 +195,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="jfa" (
         echo Installing JFA-GO
-	start cmd.exe /c installers\jfa.bat
+	start "" /wait /b cmd.exe /c installers\jfa.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -210,7 +218,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="caddy" (
         echo Installing caddy
-	start cmd.exe /c installers\caddy.bat
+	start "" /wait /b cmd.exe /c installers\caddy.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -232,7 +241,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="protonvpn" (
         echo Installing protonvpn
-	start cmd.exe /c installers\protonvpn.bat
+	start "" /wait /b cmd.exe /c installers\protonvpn.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -254,7 +264,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="eventghost" (
         echo installing Event Ghost
-	start cmd.exe /c installers\eventg.bat
+	start "" /wait /b cmd.exe /c installers\eventg.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -276,7 +287,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="noteplus" (
         echo Installing notepad++
-	start cmd.exe /c installers\noteplus.bat
+	start "" /wait /b cmd.exe /c installers\noteplus.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -298,7 +310,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="firefox" (
         echo Installing firefox
-	start cmd.exe /c installers\firefox.bat
+	start "" /wait /b cmd.exe /c installers\firefox.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -320,7 +333,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="chrome" (
         echo Installing chrome
-	start cmd.exe /c installers\chrome.bat
+	start "" /wait /b cmd.exe /c installers\chrome.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -342,7 +356,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="windirstat" (
         echo Installing windirstat
-	start cmd.exe /c installers\windirstat.bat
+	start "" /wait /b cmd.exe /c installers\windirstat.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -364,7 +379,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="m3uparser" (
         echo Installing m3uparser
-	start cmd.exe /c installers\m3uparser.bat
+	start "" /wait /b cmd.exe /c installers\m3uparser.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -386,9 +402,10 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="jellyseerr" (
         echo Installing jellyseerr
-	start cmd.exe /c installers\nodeinstall.bat
-	timeout 25
+	start "" /wait /b cmd.exe /c installers\nodeinstall.bat
+	timeout 10
 	start cmd.exe /c installers\jellyseerr.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
@@ -409,11 +426,10 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
 for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appname=%%a"
     set "appvalue=%%b"
-    if "!appname!"=="jellyseerr" (
-        echo Installing jellyseerr
-	start cmd.exe /c installers\nodeinstall.bat
-	timeout 25
-	start cmd.exe /c installers\jellyseerr.bat
+    if "!appname!"=="threadfin" (
+        echo Installing Threadfin
+	start "" /wait /b cmd.exe /c installers\Threadfin.bat
+	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
             if "%%x"=="!appname!=true" (
