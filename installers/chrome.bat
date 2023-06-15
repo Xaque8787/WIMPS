@@ -1,4 +1,5 @@
 @echo off
+cls
 cd %~dp0
 color 2
 echo / __)/ )( \(  _ \ /  \ ( \/ )(  __)
@@ -10,3 +11,4 @@ MsiExec.exe /i chrome.msi /qn
 
 timeout 3
 del chrome.msi
+exit /b
