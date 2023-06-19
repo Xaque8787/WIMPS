@@ -432,5 +432,5 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
 rem copy /y "mainlist.cfg" "installers\mainlist.cfg"
 echo.> appins.cfg
 echo running settings...
-start cmd.exe /c installers\settings.bat
+start cmd.exe /c settings.bat
 timeout 5
