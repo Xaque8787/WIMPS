@@ -23,7 +23,7 @@ rmdir /s /q "%destination%\TV VOD"
 rem mkdir "%destination%\Movie VOD"
 rem mkdir "%destination%\TV VOD"
 wget -O m3u_file.m3u %vodurl%
-"%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEDRIVE%\m3uparser\parser.py"
+"%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEPATH%\m3uparser\parser.py"
 timeout 3
 move /y "Movie VOD" "%destination%\"
 move /y "TV VOD" "%destination%\"
