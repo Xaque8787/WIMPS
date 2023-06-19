@@ -26,7 +26,7 @@ choice /C YN /M "Caddy requires information to set up reverse proxy, enter this 
 if errorlevel 2 (
 goto m3u
 ) else if errorlevel 1 (
-start "" /wait /b cmd.exe /c "%~dp0rproxy.bat"
+start "" /wait /b cmd.exe /c "..\rproxy\rproxy.bat"
 goto m3u
 )
 )
@@ -41,7 +41,7 @@ if "!appname[%%i]!" == "%checkApp2%" (
         if errorlevel 2 (
             goto end
         ) else if errorlevel 1 (
-            start "" /wait /b cmd.exe /c "%~dp0m3uinput.bat"
+            start "" /wait /b cmd.exe /c "..\m3u\m3uinput.bat"
         )
     )
 )
