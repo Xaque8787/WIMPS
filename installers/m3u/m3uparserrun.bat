@@ -18,15 +18,18 @@ choice /c 12 /n /m "Enter your selection (1 or 2):"
 if errorlevel 2 exit
 start cmd.exe /k m3uinput.bat
 ) else (
-rmdir /s /q "%destination%\Movie VOD"
-rmdir /s /q "%destination%\TV VOD"
-rem mkdir "%destination%\Movie VOD"
-rem mkdir "%destination%\TV VOD"
+if not exist "%destination%\Movie VOD\" (
+    mkdir "%destination%\Movie VOD"
+)
+
+if not exist "%destination%\TV VOD\" (
+    mkdir "%destination%\TV VOD"
+)
 wget -O m3u_file.m3u %vodurl%
 "%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEPATH%\m3uparser\parser.py"
 timeout 3
-move /y "Movie VOD" "%destination%\"
-move /y "TV VOD" "%destination%\"
+"%PROGRAMFILES%\Python\Python311\python.exe" "%~dp0moviemover.py"
+"%PROGRAMFILES%\Python\Python311\python.exe" "%~dp0tvshowmover.py"
 cd %~dp0
 
 del /s "%~dp0m3u_file.m3u"
