@@ -47,8 +47,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto radarr
+	goto radarr
     )
 )
 
@@ -70,8 +69,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto sonarr
+	goto sonarr
     )
 )
 
@@ -93,8 +91,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto prowlarr
+	goto prowlarr
     )
 )
 
@@ -116,8 +113,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto duckdns
+	goto duckdns
     )
 )
 
@@ -139,8 +135,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto qbittorrent
+	goto qbittorrent
     )
 )
 :qbittorrent
@@ -161,8 +156,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto sabnzb
+	goto sabnzb
     )
 )
 
@@ -184,8 +178,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto jfa
+	goto jfa
     )
 )
 
@@ -207,8 +200,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto caddy
+	goto caddy
     )
 )
 
@@ -230,8 +222,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto protonvpn
+	goto protonvpn
     )
 )
 
@@ -253,8 +244,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto eventghost
+	goto eventghost
     )
 )
 
@@ -276,8 +266,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto noteplus
+	goto noteplus
     )
 )
 
@@ -299,8 +288,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto firefox
+	goto firefox
     )
 )
 
@@ -322,8 +310,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto chrome
+	goto chrome
     )
 )
 
@@ -345,8 +332,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto windirstat
+	goto windirstat
     )
 )
 
@@ -368,8 +354,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto m3uparser
+	goto m3uparser
     )
 )
 
@@ -391,8 +376,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto jellyseerr
+	goto jellyseerr
     )
 )
 
@@ -416,8 +400,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto threadfin
+	goto threadfin
 
     )
 )
@@ -440,8 +423,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
-	timeout 100
-        goto next
+	goto next
 
     )
 )
