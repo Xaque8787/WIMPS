@@ -8,7 +8,7 @@ echo (  _ \(  __)/ )( \(  __)(  _ \/ ___)(  __)  (  _ \(  _ \ /  \( \/ )( \/ )
 echo  )   / ) _) \ \/ / ) _)  )   /\___ \ ) _)    ) __/ )   /(  O ))  (  )  / 
 echo (__\_)(____) \__/ (____)(__\_)(____/(____)  (__)  (__\_) \__/(_/\_)(__/  
 echo.
-cd "%HOMEDRIVE%\caddy"
+cd "%HOMEPATH%\caddy"
 echo What is your email? (optional)
 set /p email=
 if not "%email%" == "" (
