@@ -7,7 +7,7 @@ echo\____/(____)\____/\____/(__/  (____/(____)(____)(__\_)(__\_)
 
 cd %~dp0 
 wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
-7z x "main.zip" "-o%HOMEDRIVE%"
+7z x "main.zip" "-o%HOMEPATH%"
 cd %SystemRoot%\system32
 start jsinst.bat
 
