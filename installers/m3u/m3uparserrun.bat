@@ -28,8 +28,8 @@ if not exist "%destination%\TV VOD\" (
 wget -O m3u_file.m3u %vodurl%
 "%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEPATH%\m3uparser\parser.py"
 timeout 3
-"%PROGRAMFILES%\Python\Python311\python.exe" "%~dp0moviemover.py"
-"%PROGRAMFILES%\Python\Python311\python.exe" "%~dp0tvshowmover.py"
+"%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEPATH%\m3uparser\moviemover.py"
+"%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEPATH%\m3uparser\tvshowmover.py"
 cd %~dp0
 
 del /s "%~dp0m3u_file.m3u"
