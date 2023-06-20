@@ -15,10 +15,10 @@ wget -O go.msi https://go.dev/dl/go1.20.5.windows-amd64.msi
 rem call winget install --id=CPUID.CPU-Z -e -h --silent --accept-source-agreements
 
 echo Installing jellyseer repair tool, start cmd, and updater.
-copy "jsrepair.bat" "%SystemRoot%\system32"
-copy "jsinst.bat" "%SystemRoot%\system32"
-copy "jsrun.bat" "%SystemRoot%\system32"
-copy "jsupdate.bat" "%SystemRoot%\system32"
+copy "..\arr_apps\jsrepair.bat" "%SystemRoot%\system32"
+copy "..\arr_apps\jsinst.bat" "%SystemRoot%\system32"
+copy "..\arr_apps\jsrun.bat" "%SystemRoot%\system32"
+copy "..\arr_apps\jsupdate.bat" "%SystemRoot%\system32"
 echo Installing 7zip
 7zip.exe /S
 timeout 10
