@@ -1,5 +1,6 @@
 @echo off
 xcopy /s /i /y "%~dp0\installers" "%homepath%\wimps\installers"
+mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\WIMPS"
 
 setlocal
 
