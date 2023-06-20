@@ -26,7 +26,7 @@ for /L %%i in (1,1,!i!) do (
             if errorlevel 2 (
                 goto m3u
             ) else if errorlevel 1 (
-                start "" /wait /b cmd.exe /c "..\rproxy\rproxy.bat"
+                start "" /wait /b cmd.exe /c "%homepath%\wimps\installers\rproxy\rproxy.bat"
                 goto m3u
             )
         )
@@ -41,7 +41,7 @@ for /L %%i in (1,1,!i!) do (
             if errorlevel 2 (
                 goto end
             ) else if errorlevel 1 (
-                start "" /wait /b cmd.exe /c "..\m3u\m3uinput.bat"
+                start "" /wait /b cmd.exe /c "%homepath%\m3uparser\m3uinput.bat"
             )
         )
     )
