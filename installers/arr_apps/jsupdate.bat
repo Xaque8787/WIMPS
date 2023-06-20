@@ -12,8 +12,9 @@ wget https://github.com/Fallenbagel/jellyseerr/archive/refs/heads/main.zip
 rmdir /s /q %HOMEPATH%\jellyseerr-main
 7z x "main.zip" -o%HOMEPATH%
 cd %HOMEPATH%/jellyseerr-main
-call "C:\Program Files (x86)\Yarn\bin\yarn.bat" install
-call "C:\Program Files (x86)\Yarn\bin\yarn.bat" run build
+yarn install && yarn run build
+rem call "C:\Program Files (x86)\Yarn\bin\yarn.bat" install
+rem call "C:\Program Files (x86)\Yarn\bin\yarn.bat" run build
 cd %HOMEPATH%
 move /y config %HOMEPATH%\jellyseerr-main
 
