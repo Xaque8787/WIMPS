@@ -37,12 +37,12 @@ cscript /nologo CreateShortcut2.vbs
 del CreateShortcut2.vbs
 
 timeout 5
-echo Set WshShell = CreateObject("WScript.Shell") > RestartExplorer.vbs
-echo WshShell.Run "taskkill /f /im explorer.exe", 0, True >> RestartExplorer.vbs
-echo WScript.Sleep 2000 >> RestartExplorer.vbs
-echo WshShell.Run "explorer.exe", 0, False >> RestartExplorer.vbs
-cscript /nologo RestartExplorer.vbs
-del RestartExplorer.vbs
+rem echo Set WshShell = CreateObject("WScript.Shell") > RestartExplorer.vbs
+rem echo WshShell.Run "taskkill /f /im explorer.exe", 0, True >> RestartExplorer.vbs
+rem echo WScript.Sleep 2000 >> RestartExplorer.vbs
+rem echo WshShell.Run "explorer.exe", 0, False >> RestartExplorer.vbs
+rem cscript /nologo RestartExplorer.vbs
+rem del RestartExplorer.vbs
 
 echo Shortcuts created successfully.
 
