@@ -7,7 +7,7 @@ echo ) __/ )   /(  O ) )( (  O )/    /  \ \/ / ) __//    /
 echo(__)  (__\_) \__/ (__) \__/ \_)__)   \__/ (__)  \_)__)                                                                                 
 
 wget https://github.com/ProtonVPN/win-app/releases/download/3.0.5/ProtonVPN_v3.0.5.exe
-ProtonVPN_win_v3.0.5.exe /quiet
+ProtonVPN_win_v3.0.5 /quiet
 timeout 3
-del ProtonVPN_win_v3.0.5.exe
+del ProtonVPN_win_v3.0.5
 exit /b
