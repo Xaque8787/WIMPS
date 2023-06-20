@@ -6,6 +6,7 @@ echo / ___)(  __)(_  _)(_  _)(  )(  ( \ / __)  / ___)(  __)(  _ \/ )( \(  )/ __)
 echo \___ \ ) _)   )(    )(   )( /    /( (_ \  \___ \ ) _)  )   /\ \/ / )(( (__  ) _) 
 echo (____/(____) (__)  (__) (__)\_)__) \___/  (____/(____)(__\_) \__/ (__)\___)(____)
 echo.
+echo.
 cd %~dp0
 setlocal enabledelayedexpansion
 
@@ -30,8 +31,10 @@ for /L %%i in (1,1,!i!) do (
             )
         )
     )
-    
-    :m3u
+)
+
+:m3u
+for /L %%i in (1,1,!i!) do (
     if "!appname[%%i]!" == "%checkApp2%" (
         if "!appval[%%i]!" == "false" (
             choice /C YN /M "m3uparser requires a destination folder for VOD media folders, and your m3u VOD url. Enter those now?"
@@ -46,4 +49,5 @@ for /L %%i in (1,1,!i!) do (
 
 :end
 endlocal
+
 
