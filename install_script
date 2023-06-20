@@ -1,3 +1,26 @@
 @echo off
 xcopy /s /i /y "%~dp0\installers" "%homepath%\wimps\"
-move
+
+setlocal
+
+set "Drive=%~d0"
+set "ShortcutFile=%CD%\wimps.lnk"
+set "IconFile=%Drive%%homepath%\wimps\installers\wimps\wimplogo.ico"
+
+set "TargetPath=%Drive%%homepath%\wimps\installers\wimps\wimps.bat"
+set "WorkingDirectory=%Drive%%homepath%\wimps\installers\wimps\"
+
+echo Creating shortcut...
+echo Target Path: %TargetPath%
+echo Working Directory: %WorkingDirectory%
+echo Icon Path: %IconFile%
+
+echo Set oWS = WScript.CreateObject("WScript.Shell") > CreateShortcut.vbs
+echo sLinkFile = "%ShortcutFile%" >> CreateShortcut.vbs
+echo Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs
+echo oLink.TargetPath = "%TargetPath%" >> CreateShortcut.vbs
+echo oLink.WorkingDirectory = "%WorkingDirectory%" >> CreateShortcut.vbs
+echo oLink.IconLocation = "%IconFile%" >> CreateShortcut.vbs
+echo oLink.Save >> CreateShortcut.vbs
+cscript /nologo CreateShortcut.vbs
+del CreateShortcut.vbs
