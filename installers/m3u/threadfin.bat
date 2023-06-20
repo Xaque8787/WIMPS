@@ -11,7 +11,7 @@ wget https://github.com/Threadfin/Threadfin/archive/refs/heads/main.zip
 cd %HOMEPATH%\Threadfin-main
 go mod tidy && go mod vendor
 go build threadfin.go
-go run threadfin.go
+rem go run threadfin.go
 cd %~dp0
 timeout 3
 del main.zip
