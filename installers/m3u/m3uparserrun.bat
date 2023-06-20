@@ -31,7 +31,8 @@ timeout 3
 "%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEPATH%\m3uparser\moviemover.py"
 "%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEPATH%\m3uparser\tvshowmover.py"
 cd %~dp0
-
+rmdir /s /q "%HOMEPATH%\m3uparser\Movie VOD"
+rmdir /s /q "%HOMEPATH%\m3uparser\TV VOD"
 del /s "%~dp0m3u_file.m3u"
 
 )
