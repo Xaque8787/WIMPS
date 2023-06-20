@@ -16,7 +16,7 @@ echo 1. Set Destination
 echo 2. Exit
 choice /c 12 /n /m "Enter your selection (1 or 2):"
 if errorlevel 2 exit
-start cmd.exe /k m3uinput.bat
+start "" /wait /b cmd.exe /c %HOMEPATH%\m3uparser\m3uinput.bat
 ) else (
 if not exist "%destination%\Movie VOD\" (
     mkdir "%destination%\Movie VOD"
