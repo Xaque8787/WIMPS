@@ -9,7 +9,7 @@ Download the repository and unzip to any location. Run the install_script, which
 # Requirements
 - public IP (no cgnat support yet)
 - port 80 and 443 forwared from your router to the local ip address of the machine running WIMPS/reverse proxy.
-- ddns subdomains for each service you'd like behind reverse proxy, WIMPS uses duckdns by default, and has a updated included in the script. (user\current user\duckdns)
+- ddns subdomains for each service you'd like behind reverse proxy, WIMPS uses duckdns by default, and has a updater app included in the script. (user\current user\duckdns)
 - m3u VOD list. If your m3u contains live tv channels then you will need to first use an editor to filter those out. You can use threadfin for this. (supplied with WIMPS)
 - ProntonMail account to use ProtonVPN. (optional for use with QbitTorrent)
 - Usenet and Indexer if using Sabnzb for ^arr apps.
