@@ -10,20 +10,14 @@ cd %~dp0
 set /p destination=<destination.cfg
 set /p vodurl=<vodurl.cfg
 if "%destination%" == "" (
-echo Destination folder and VOD url not set.
-echo Do you want to set them now?
-echo 1. Set Destination
-echo 2. Exit
-choice /c 12 /n /m "Enter your selection (1 or 2):"
-if errorlevel 2 exit
-start "" /wait /b cmd.exe /c %HOMEPATH%\m3uparser\m3uinput.bat
+    echo Destination folder and VOD URL not set.
+    echo Do you want to set them now?
+    echo 1. Set Destination
+    echo 2. Exit
+    choice /c 12 /n /m "Enter your selection (1 or 2):"
+    if errorlevel 2 exit
 ) else (
-if not exist "%destination%\Movie VOD\" (
-    mkdir "%destination%\Movie VOD"
-)
-
-if not exist "%destination%\TV VOD\" (
-    mkdir "%destination%\TV VOD"
+    start "" /wait /b cmd.exe /c %HOMEPATH%\m3uparser\m3uinput.bat
 )
 wget -O m3u_file.m3u %vodurl%
 "%PROGRAMFILES%\Python\Python311\python.exe" "%HOMEPATH%\m3uparser\parser.py"
@@ -34,5 +28,3 @@ cd %~dp0
 rmdir /s /q "%HOMEPATH%\m3uparser\Movie VOD"
 rmdir /s /q "%HOMEPATH%\m3uparser\TV VOD"
 del /s "%~dp0m3u_file.m3u"
-
-)
