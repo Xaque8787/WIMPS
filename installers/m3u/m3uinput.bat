@@ -7,10 +7,10 @@ echo / \/ \ (__ () \/ (   )( /    / ) _)(  O )
 echo \_)(_/(____/\____/  (__)\_)__)(__)  \__/ 
 echo.
 cd %~dp0
-echo Folder destination for media?
+echo Folder destination for media? This is where your VOD Media will be located.
 set /p destination=
 
-echo m3u VOD URL?
+echo m3u VOD URL? This is the m3u url for your VOD
 set /p vodurl=
 
 echo %destination%|find /v "" > destination.cfg
