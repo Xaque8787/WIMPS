@@ -27,6 +27,7 @@ for /L %%i in (1,1,!i!) do (
                 goto m3u
             ) else if errorlevel 1 (
                 start "" /wait /b cmd.exe /c "%homepath%\wimps\installers\rproxy\rproxy.bat"
+                cls
                 goto m3u
             )
         )
@@ -34,6 +35,11 @@ for /L %%i in (1,1,!i!) do (
 )
 
 :m3u
+echo  ____  ____  ____  ____  __  __ _   ___    ____  ____  ____  _  _  __  ___  ____ 
+echo / ___)(  __)(_  _)(_  _)(  )(  ( \ / __)  / ___)(  __)(  _ \/ )( \(  )/ __)(  __)
+echo \___ \ ) _)   )(    )(   )( /    /( (_ \  \___ \ ) _)  )   /\ \/ / )(( (__  ) _) 
+echo (____/(____) (__)  (__) (__)\_)__) \___/  (____/(____)(__\_) \__/ (__)\___)(____)
+echo.
 for /L %%i in (1,1,!i!) do (
     if "!appname[%%i]!" == "%checkApp2%" (
         if "!appval[%%i]!" == "false" (
@@ -42,6 +48,7 @@ for /L %%i in (1,1,!i!) do (
                 goto end
             ) else if errorlevel 1 (
                 start "" /wait /b cmd.exe /c "%homepath%\m3uparser\m3uinput.bat"
+                cls
             )
         )
     )
