@@ -6,7 +6,7 @@ setlocal
 set "Drive=%~d0"
 set "ShortcutFile=%homepath%\Desktop\wimps.lnk"
 set "ShortcutFile2=%appdata%\Microsoft\Windows\Start Menu\Programs\wimps.lnk"
-set "IconFile=%Drive%%homepath%\wimps\installers\wimps\wimpslogo.ico"
+set "IconFile=%Drive%%homepath%\wimps\installers\wimps\wimplogo.ico"
 
 set "TargetPath=%Drive%%homepath%\wimps\installers\wimps\wimps.bat"
 set "WorkingDirectory=%Drive%%homepath%\wimps\installers\wimps\"
