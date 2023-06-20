@@ -36,7 +36,7 @@ del 7zip.exe
 del node.msi
 del yarn.msi
 del python.exe
-call "%~dp0nodeinstall.bat"
+call "..\tools\nodeinstall.bat"
 timeout 20
 call "%PROGRAMFILES%\nodejs\nodevars.bat"
 call npm install -g npm && call npm install -g win-node-env
