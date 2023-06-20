@@ -17,5 +17,5 @@ echo %destination%|find /v "" > destination.cfg
 echo %vodurl%|find /v "" > vodurl.cfg
 
 timeout 3
-start m3uparserrun.bat
+start %homepath%\m3uparser\m3uparserrun.bat
 exit /b
