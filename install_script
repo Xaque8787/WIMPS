@@ -1,0 +1,3 @@
+@echo off
+xcopy /s /i /y "%~dp0\installers" "%homepath%\wimps\"
+move
