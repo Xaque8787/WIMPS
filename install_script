@@ -1,5 +1,5 @@
 @echo off
-xcopy /s /i /y "%~dp0\installers" "%homepath%\wimps\"
+xcopy /s /i /y "%~dp0\installers" "%homepath%\wimps\installers"
 
 setlocal
 
