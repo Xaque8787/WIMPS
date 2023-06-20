@@ -140,29 +140,7 @@ a:visited {
           }
         ]
       },
-      {
-        name: 'Prowlarr',
-        color: '#F34F2C',
-        famelink: 'http://localhost:9696',
-        links: [
-          {
-            title: 'Prowlarr Link 1',
-            summary: 'Brief summary of Prowlarr Link 1',
-            url: 'http://dummyurlxt21.com'
-          },
-          {
-            title: 'Prowlarr Link 2',
-            summary: 'Brief summary of Prowlarr Link 2',
-            url: 'http://dummyurlxt21.com'
-          },
-          {
-            title: 'Prowlarr Link 3',
-            summary: 'Brief summary of Prowlarr Link 3',
-            url: 'http://dummyurlxt21.com'
-          }
-        ]
-      },
-      {
+     {
         name: 'Radarr',
         famelink: 'http://localhost:7878',
         color: '#F7C118',
@@ -180,6 +158,28 @@ a:visited {
           {
             title: 'Radarr Link 3',
             summary: 'Brief summary of Radarr Link 3',
+            url: 'http://dummyurlxt21.com'
+          }
+        ]
+      },
+     {
+        name: 'Prowlarr',
+        color: '#F34F2C',
+        famelink: 'http://localhost:9696',
+        links: [
+          {
+            title: 'Prowlarr Link 1',
+            summary: 'Brief summary of Prowlarr Link 1',
+            url: 'http://dummyurlxt21.com'
+          },
+          {
+            title: 'Prowlarr Link 2',
+            summary: 'Brief summary of Prowlarr Link 2',
+            url: 'http://dummyurlxt21.com'
+          },
+          {
+            title: 'Prowlarr Link 3',
+            summary: 'Brief summary of Prowlarr Link 3',
             url: 'http://dummyurlxt21.com'
           }
         ]
@@ -336,7 +336,7 @@ a:visited {
 <script>
   window.addEventListener('DOMContentLoaded', function() {
     var contentFrame = document.getElementById('content-frame');
-    contentFrame.src = 'landing.html'; // Replace 'landing.html' with your desired landing page URL
+    contentFrame.src = 'https://www.google.com/webhp?igu=1'; // Replace 'landing.html' with your desired landing page URL
   });
 </script>
 </head>
@@ -352,13 +352,13 @@ a:visited {
       <img src="img\sonarr.png" alt="Sonarr">
       <div class="service-label">Sonarr</div>
     </a>
+      <a href="#">
+      <img src="img\radarrlogo.png" alt="Radarr">
+      <div class="service-label">Radarr</div>
+    </a>
     <a href="#">
       <img src="img\prowlarr.png" alt="Prowlarr">
       <div class="service-label">Prowlarr</div>
-    </a>
-    <a href="#">
-      <img src="img\radarrlogo.png" alt="Radarr">
-      <div class="service-label">Radarr</div>
     </a>
     <a href="#">
       <img src="img\jellyfin.png" alt="Jellyfin">
