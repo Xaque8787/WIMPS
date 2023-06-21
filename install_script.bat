@@ -7,7 +7,7 @@ setlocal
 set "Drive=%~d0"
 set "ShortcutFile=%homepath%\Desktop\wimps.lnk"
 set "ShortcutFile2=%appdata%\Microsoft\Windows\Start Menu\Programs\WIMPS\WIMPS.lnk"
-set "ShortcutFile3=%appdata%\Microsoft\Windows\Start Menu\Programs\WIMPS\WIMPS_Portal.lnk"
+set "ShortcutFile3=%appdata%\Microsoft\Windows\Start Menu\Programs\WIMPS\WIMPSPortal.lnk"
 set "ShortcutFile4=%appdata%\Microsoft\Windows\Start Menu\Programs\WIMPS\WIMPS_Settings.lnk"
 set "IconFile=%Drive%%homepath%\wimps\installers\wimps\wimplogo.ico"
 set "IconFile3=%Drive%%homepath%\wimps\installers\wimps\wimplogo.ico"
@@ -90,7 +90,7 @@ cscript /nologo CreateShortcut4.vbs
 del CreateShortcut4.vbs
 
 echo.
-copy "%appdata%\Microsoft\Windows\Start Menu\Programs\WIMPS\WIMPS_Portal.lnk" "%homepath%\Desktop"
+copy "%appdata%\Microsoft\Windows\Start Menu\Programs\WIMPS\WIMPSPortal.lnk" "%homepath%\Desktop"
 echo All shortcuts created successfully.
 
 timeout 5
@@ -101,5 +101,5 @@ rem echo WshShell.Run "explorer.exe", 0, False >> RestartExplorer.vbs
 rem cscript /nologo RestartExplorer.vbs
 rem del RestartExplorer.vbs
 
-echo Shortcuts created successfully.
+rem echo Shortcuts created successfully.
 
