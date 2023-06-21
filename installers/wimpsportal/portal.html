@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>~~~~~~WIMPS PORTAL~~~~~~</title>
-  <style>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>~~~~~~WIMPS PORTAL~~~~~~</title>
+   <style>
     body {
       margin: 0;
       padding: 0;
@@ -13,57 +18,73 @@
       text-transform: uppercase;
       font-weight: bold;
     }
-#left-panel {
+
+    #left-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #111;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 2px solid black;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #left-panel img {
+      display: block;
+      width: 72px;
+      height: 72px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+
+    .service-label {
+      text-align: center;
+      font-family: inherit;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    #content-container {
+  margin-left: 200px; /* Add a margin to account for the width of the left panel */
+  margin-right: 200px; /* Add a margin to account for the width of the right panel */
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black; /* Add a top border */
+  border-bottom: 2px solid black; /* Add a bottom border */
+}
+
+
+    #content-frame {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    #right-panel {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 200px;
   height: 100vh;
   background-color: #111;
   padding: 20px;
   box-sizing: border-box;
-  border-right: 2px solid black;
-  justify-content: center;
-}
-
-#left-panel img {
-  display: block;
-  width: 72px;
-  height: 72px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-
-.service-label {
-  text-align: center;
-  font-family: inherit;
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-
-#content-container {
-  position: absolute;
-  top: 0;
-  left: 200px;
-  right: 0;
-  bottom: 0;
-  display: flex;
-}
-
-#content-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
-  box-sizing: border-box;
-}
-
-#right-panel {
-  width: 400px; /* Adjust the width as needed */
-  background-color: #111;
-  padding: 20px;
-  box-sizing: border-box;
   border-left: 2px solid black;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 #right-panel a {
@@ -81,18 +102,13 @@
   font-size: 12px;
   margin-bottom: 20px;
 }
-#content-frame {
-  width: 100%;
-  height: 100%;
-  border: 2px solid #000; /* Set initial border color to black */
-  box-sizing: border-box;
-} 
-a:link,
-a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-</style>
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
  <script>
   window.addEventListener('DOMContentLoaded', function() {
     var services = [
@@ -303,34 +319,32 @@ a:visited {
       leftPanelLinks.forEach(function(link, index) {
         link.addEventListener('click', function(event) {
           event.preventDefault();
-          var serviceName = link.querySelector('.service-label').innerText.trim();
-          var service = services[index];
-
-          contentFrame.style.borderColor = service.color;
-          contentFrame.src = service.famelink;
-          populateRightPanel(service.links);
+          setActiveLink(link);
+          loadContent(services[index]);
         });
       });
 
-      function populateRightPanel(links) {
-        clearRightPanel();
-
-        links.forEach(function(link) {
-          var anchor = document.createElement('a');
-          anchor.href = link.url;
-          anchor.textContent = link.title;
-          rightPanel.appendChild(anchor);
-
-          var summary = document.createElement('div');
-          summary.className = 'link-summary';
-          summary.textContent = link.summary;
-          rightPanel.appendChild(summary);
+      function setActiveLink(link) {
+        leftPanelLinks.forEach(function(link) {
+          link.classList.remove('active');
         });
+        link.classList.add('active');
       }
 
-      function clearRightPanel() {
-        rightPanel.innerHTML = '';
-      }
+      function loadContent(service) {
+  contentFrame.src = service.famelink;
+  var linksHTML = '';
+  service.links.forEach(function(link) {
+    linksHTML += '<a href="' + link.url + '">' + link.title + '</a>';
+    linksHTML += '<div class="link-summary">' + link.summary + '</div>';
+  });
+  rightPanel.innerHTML = linksHTML;
+  contentFrame.style.border = '2px solid ' + service.color;
+}
+
+      // Set the initial active link and load its content
+      setActiveLink(leftPanelLinks[0]);
+      loadContent(services[0]);
     });
   </script>
 <script>
