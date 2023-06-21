@@ -90,6 +90,7 @@ cscript /nologo CreateShortcut4.vbs
 del CreateShortcut4.vbs
 
 echo.
+copy "%appdata%\Microsoft\Windows\Start Menu\Programs\WIMPS\WIMPS_Portal.lnk" "%homepath%\Desktop"
 echo All shortcuts created successfully.
 
 timeout 5
