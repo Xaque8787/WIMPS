@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>~~~~~~WIMPS PORTAL~~~~~~</title>
+  <link rel="icon" type="image/png" href="img\wimps.png">
+   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1f1f1f;
+      color: #fff;
+      font-family: Tahoma, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    #left-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #111;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 2px solid black;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #left-panel img {
+      display: block;
+      width: 72px;
+      height: 72px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+
+    .service-label {
+      text-align: center;
+      font-family: inherit;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    #content-container {
+  margin-left: 200px; /* Add a margin to account for the width of the left panel */
+  margin-right: 200px; /* Add a margin to account for the width of the right panel */
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black; /* Add a top border */
+  border-bottom: 2px solid black; /* Add a bottom border */
+}
+
+
+    #content-frame {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    #right-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #111;
+  padding: 20px;
+  box-sizing: border-box;
+  border-left: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+#right-panel a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+#right-panel a:hover {
+  text-decoration: underline;
+}
+
+#right-panel .link-summary {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+ <script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var services = [
+      {
+        name: 'WIMPS',
+        color: '#1f1f1f',
+        famelink: 'wimpsland.html',
+        links: [
+          {
+            title: 'WIMPS GitHub',
+            summary: 'GitHub home for WIMPS',
+            url: 'https://github.com/Xaque8787/WIMPS'
+          },
+          {
+            title: 'WIMPS Tutorials',
+            summary: 'Instructions and examples',
+            url: 'https://github.com/Xaque8787/WIMPS'
+          },
+          {
+            title: 'WIMPS Donate',
+            summary: 'Donate to WIMPS',
+            url: 'https://github.com/Xaque8787/WIMPS'
+          }
+        ]
+      },
+      {
+        name: 'Sonarr',
+        color: '#12E0E7',
+        famelink: 'http://localhost:8989',
+        links: [
+          {
+            title: 'Sonarr GitHub',
+            summary: 'GitHub home for Sonarr',
+            url: 'https://github.com/Sonarr/Sonarr'
+          },
+          {
+            title: 'Sonarr Wiki',
+            summary: 'Wiki for Sonarr',
+            url: 'https://wiki.servarr.com/sonarr'
+          },
+          {
+            title: 'Sonarr Website',
+            summary: 'Sonarr home website',
+            url: 'https://sonarr.tv/'
+          }
+        ]
+      },
+     {
+        name: 'Radarr',
+        famelink: 'http://localhost:7878',
+        color: '#F7C118',
+        links: [
+          {
+            title: 'Radarr GitHub',
+            summary: 'GitHub home for Radarr',
+            url: 'https://github.com/Radarr/Radarr'
+          },
+          {
+            title: 'Radarr Wiki',
+            summary: 'Wiki for Radarr',
+            url: 'https://wiki.servarr.com/en/radarr'
+          },
+          {
+            title: 'Radarr Website',
+            summary: 'Radarr home website',
+            url: 'https://radarr.video/'
+          }
+        ]
+      },
+     {
+        name: 'Prowlarr',
+        color: '#F34F2C',
+        famelink: 'http://localhost:9696',
+        links: [
+          {
+            title: 'Prowlarr Github',
+            summary: 'GitHub home for Prowlarr',
+            url: 'https://github.com/prowlarr/prowlarr'
+          },
+          {
+            title: 'Prowlarr Wiki',
+            summary: 'Wiki for Prowlarr',
+            url: 'https://wiki.servarr.com/en/prowlarr'
+          },
+          {
+            title: 'Prowlarr Website',
+            summary: 'Prowlarr home website',
+            url: 'https://prowlarr.com/'
+          }
+        ]
+      },
+      {
+        name: 'Jellyfin',
+        color: '#9B4BE7',
+        famelink: 'http://localhost:8096',
+        links: [
+          {
+            title: 'Jellyfin GitHub',
+            summary: 'GitHub home of Jellyfin',
+            url: 'https://github.com/jellyfin'
+          },
+          {
+            title: 'Jellyfin Wiki',
+            summary: 'Wiki for Jellyfin',
+            url: 'https://jellyfin.org/docs/'
+          },
+          {
+            title: 'Jellyfin Forum',
+            summary: 'Forum home of Jellyfin',
+            url: 'https://forum.jellyfin.org/'
+          }
+        ]
+      },
+      {
+        name: 'Jellyseerr',
+        color: '#9B4BE7',
+        famelink: 'http://localhost:5055',
+        links: [
+          {
+            title: 'Jellyseerr GitHub',
+            summary: 'GitHub home of Jellyseerr',
+            url: 'https://github.com/Fallenbagel/jellyseerr'
+          },
+          {
+            title: 'Jellyseerr DockerHub',
+            summary: 'DockerHub for Jellyseerr',
+            url: 'https://hub.docker.com/r/fallenbagel/jellyseerr'
+          },
+          {
+            title: 'Jellyseerr Discord',
+            summary: 'Discord link for Jellyseerr',
+            url: 'https://discord.gg/ckbvBtDJgC'
+          }
+        ]
+      },
+      {
+        name: 'JFA-GO',
+        color: '#9B4BE7',
+        famelink: 'http://localhost:8056',
+        links: [
+          {
+            title: 'JFA-GO GitHub',
+            summary: 'GitHub for JFA-GO',
+            url: 'https://github.com/hrfee/jfa-go'
+          },
+          {
+            title: 'JFA-GO Website',
+            summary: 'JFA-GO home website',
+            url: 'https://jfa-go.com/'
+          },
+          {
+            title: 'JFA-GO Wiki',
+            summary: 'Wiki for JFA-GO',
+            url: 'https://wiki.jfa-go.com/'
+          }
+        ]
+      },
+      {
+        name: 'SabNZB',
+        famelink: 'http://localhost:8080',
+        color: '#F7C118',
+        links: [
+          {
+            title: 'SabNZB GitHub',
+            summary: 'GitHub for SabNZB',
+            url: 'http://dummyurlxt21.com'
+          },
+          {
+            title: 'SabNZB Wesbite',
+            summary: 'SabNZB home website',
+            url: 'https://sabnzbd.org/'
+          },
+          {
+            title: 'SabNZB Wiki',
+            summary: 'Wiki for SabNZB',
+            url: 'https://sabnzbd.org/wiki/'
+          }           
+        ]
+      },
+      {
+        name: 'qBittorrent',
+        color: '#27BAED',
+        famelink: 'http://localhost:8081',
+        links: [
+          {
+            title: 'qBittorrent GitHub',
+            summary: 'GitHub for qBittorrent',
+            url: 'https://github.com/qbittorrent/qBittorrent'
+          },
+          {
+            title: 'qBittorrent Website',
+            summary: 'qBittorrent home website',
+            url: 'https://www.qbittorrent.org/'
+          },
+          {
+            title: 'qBittorrent wiki',
+            summary: 'Wiki for qBittorrent',
+            url: 'https://github.com/qbittorrent/qBittorrent/wiki/'
+          }
+        ]
+      }
+    ];
+
+      var leftPanelLinks = document.querySelectorAll('#left-panel a');
+      var rightPanel = document.getElementById('right-panel');
+      var contentFrame = document.getElementById('content-frame');
+
+      leftPanelLinks.forEach(function(link, index) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          setActiveLink(link);
+          loadContent(services[index]);
+        });
+      });
+
+      function setActiveLink(link) {
+        leftPanelLinks.forEach(function(link) {
+          link.classList.remove('active');
+        });
+        link.classList.add('active');
+      }
+
+      function loadContent(service) {
+  contentFrame.src = service.famelink;
+  var linksHTML = '';
+  service.links.forEach(function(link) {
+    linksHTML += '<a href="' + link.url + '">' + link.title + '</a>';
+    linksHTML += '<div class="link-summary">' + link.summary + '</div>';
+  });
+  rightPanel.innerHTML = linksHTML;
+  contentFrame.style.border = '2px solid ' + service.color;
+}
+
+      // Set the initial active link and load its content
+      setActiveLink(leftPanelLinks[0]);
+     // loadContent(services[0]);
+    });
+  </script>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var contentFrame = document.getElementById('content-frame');
+    contentFrame.src = 'https://www.google.com/webhp?igu=1'; // Replace 'landing.html' with your desired landing page URL
+  });
+</script>
+</head>
+<body>
+</head>
+<body>
+  <div id="left-panel">
+    <a href="#">
+      <img src="img\wimps.png" alt="WIMPS">
+      <div class="service-label">WIMPS</div>
+    </a>
+    <a href="#">
+      <img src="img\sonarr.png" alt="Sonarr">
+      <div class="service-label" style="color: #12E0E7;">Sonarr</div>
+    </a>
+      <a href="#">
+      <img src="img\radarrlogo.png" alt="Radarr">
+      <div class="service-label" style="color: #F7C118;">Radarr</div>
+    </a>
+    <a href="#">
+      <img src="img\prowlarr.png" alt="Prowlarr">
+      <div class="service-label" style="color: #F34F2C;">Prowlarr</div>
+    </a>
+    <a href="#">
+      <img src="img\jellyfin.png" alt="Jellyfin">
+      <div class="service-label" style="color: #9B4BE7;">Jellyfin</div>
+    </a>
+    <a href="#">
+      <img src="img\jellyseerr.png" alt="jellyseerr">
+      <div class="service-label" style="color: #9B4BE7;">Jellyseerr</div>
+    </a>
+    <a href="#">
+      <img src="img\jfago.png" alt="JFA-GO">
+      <div class="service-label" style="color: #9B4BE7;">JFA-GO</div>
+    </a>
+    <a href="#">
+      <img src="img\sab.png" alt="SabNZB">
+      <div class="service-label" style="color: #F7C118;">SabNZB</div>
+    </a>
+    <a href="#">
+      <img src="img\qbit.png" alt="qBittorrent">
+      <div class="service-label" style="color: #27BAED;">qBittorrent</div>
+    </a>
+  </div>
+  <div id="content-container">
+    <iframe id="content-frame" name="content-frame"></iframe>
+    <div id="right-panel"></div>
+  </div>
+</body>
+</html>
