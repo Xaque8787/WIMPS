@@ -13,4 +13,4 @@ Download the repository and unzip to any location. Run the install_script, which
 - m3u VOD list. If your m3u contains live tv channels then you will need to first use an editor to filter those out. You can use threadfin for this. (supplied with WIMPS)
 - ProntonMail account to use ProtonVPN. (optional for use with QbitTorrent)
 - Usenet and Indexer account if using Sabnzb for *arr apps.
-- this script will install these services/apps as pre requirements; pyton3, node,js, yarn, go, wget, 7zip
+- this script will install these services/apps as pre requirements; pyton3, node.js, yarn, go, wget, 7zip
