@@ -37,7 +37,7 @@ del node.msi
 del yarn.msi
 del python.exe
 call "..\tools\nodeinstall.bat"
-timeout 20
+timeout 10
 call "%PROGRAMFILES%\nodejs\nodevars.bat"
 call npm install -g npm && call npm install -g win-node-env
 echo All Pre-Reqs installed.
