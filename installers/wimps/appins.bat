@@ -386,9 +386,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="jellyseerr" (
         echo Installing jellyseerr
-	start "" /wait /b cmd.exe /c ..\tools\nodeinstall.bat
-	timeout 10
-	start cmd.exe /c installers\jellyseerr.bat
+	start "" /wait /b cmd.exe /c ..\arr_apps\jellyseerr.bat
 	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
