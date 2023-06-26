@@ -364,7 +364,7 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
     set "appvalue=%%b"
     if "!appname!"=="m3uparser" (
         echo Installing m3uparser
-	start "" /wait /b cmd.exe /c ..\rproxy\m3uparser.bat
+	start "" /wait /b cmd.exe /c ..\m3u\m3uparser.bat
 	cls
 	set "newline=!appname!=false"
         (for /f "delims=" %%x in (mainlist.cfg) do (
