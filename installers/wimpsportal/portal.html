@@ -106,6 +106,18 @@
     }
   </style>
  <script>
+  // Add an array of service names that should have iframe exceptions
+  var iframeExceptions = ['Jellyseerr', 'Threadfin'];
+
+  // Function to check if a service is an iframe exception
+  function isIframeException(serviceName) {
+    return iframeExceptions.includes(serviceName);
+  }
+
+  // Function to open framelink exceptions in a new window
+  function openFramelinkException(url) {
+    window.open(url);
+  }
   window.addEventListener('DOMContentLoaded', function() {
     var services = [
       {
@@ -330,41 +342,45 @@
       }
     ];
 
-      var leftPanelLinks = document.querySelectorAll('#left-panel a');
-      var rightPanel = document.getElementById('right-panel');
-      var contentFrame = document.getElementById('content-frame');
+       var leftPanelLinks = document.querySelectorAll('#left-panel a');
+    var rightPanel = document.getElementById('right-panel');
+    var contentFrame = document.getElementById('content-frame');
 
-      leftPanelLinks.forEach(function(link, index) {
-        link.addEventListener('click', function(event) {
-          event.preventDefault();
-          setActiveLink(link);
-          loadContent(services[index]);
-        });
+    leftPanelLinks.forEach(function(link, index) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        setActiveLink(link);
+        loadContent(services[index]);
       });
-
-      function setActiveLink(link) {
-        leftPanelLinks.forEach(function(link) {
-          link.classList.remove('active');
-        });
-        link.classList.add('active');
-      }
-
-      function loadContent(service) {
-  contentFrame.src = service.famelink;
-  var linksHTML = '';
-  service.links.forEach(function(link) {
-    linksHTML += '<a href="' + link.url + '">' + link.title + '</a>';
-    linksHTML += '<div class="link-summary">' + link.summary + '</div>';
-  });
-  rightPanel.innerHTML = linksHTML;
-  contentFrame.style.border = '2px solid ' + service.color;
-}
-
-      // Set the initial active link and load its content
-      setActiveLink(leftPanelLinks[0]);
-     // loadContent(services[0]);
     });
-  </script>
+
+    function setActiveLink(link) {
+      leftPanelLinks.forEach(function(link) {
+        link.classList.remove('active');
+      });
+      link.classList.add('active');
+    }
+
+    function loadContent(service) {
+      if (isIframeException(service.name)) {
+        openFramelinkException(service.famelink);
+      } else {
+        contentFrame.src = service.famelink;
+        var linksHTML = '';
+        service.links.forEach(function(link) {
+          linksHTML += '<a href="' + link.url + '">' + link.title + '</a>';
+          linksHTML += '<div class="link-summary">' + link.summary + '</div>';
+        });
+        rightPanel.innerHTML = linksHTML;
+        contentFrame.style.border = '2px solid ' + service.color;
+      }
+    }
+
+    // Set the initial active link and load its content
+    setActiveLink(leftPanelLinks[0]);
+    // loadContent(services[0]);
+  });
+</script>
 <script>
   window.addEventListener('DOMContentLoaded', function() {
     var contentFrame = document.getElementById('content-frame');
