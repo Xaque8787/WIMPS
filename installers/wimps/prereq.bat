@@ -32,6 +32,7 @@ go.msi /quiet /norestart
 echo Installing python
 python.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
 timeout 3
+del go.msi
 del 7zip.exe
 del node.msi
 del yarn.msi
