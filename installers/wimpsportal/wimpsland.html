@@ -100,13 +100,41 @@ can be expanded to include other services. Such as
     <p>Go to mapping and make sure channels are in the order you want and have epg data from provided xml</p>
     <p>In the "server Information" section (hamberger icon) you will see a url for both the m3u and epg xml. Replace the username and pass with threadfin credentials.</p>
     <p>In Jellyfin under Dashboard> Live TV> add m3u tuner and put in threadfin m3u url, add xmltv data and put in threadfin epg url</p>
+    <h1>Jellyfin</h1>
+    <p>Run through the jellyfin wizard</p>
+    <p>For the creaeted user uncheck "allow auido playback that requires transcoding"</p>
+    <p>For the creaeted user uncheck allow Video playback that requires transcoding</p>
+<p>Uncheck Force transcoding of remote media sources such as Live TV</p>
+    <p>In dashboard>library>set up Movie and TV folder pointed to the location set in WIMPS settings, make sure Real Time Monitoring is enabled</p>
+    <p>See threadfin for live tv setup</p>
     <h1>*JFA-GO</h1>
+    <p>Run the jfa.exe in %homepath%/jfa</p>
+    <p>Run through the setup, and enable auto start with the tray icon</p>
     <h1>Reverse Proxy</h1>
+    <h2>DuckDNS</h2>
+    <p>Sign in to DuckDNS and create three domains, one each for; Jellyfin server, Jellyseerr, and JFA-GO</p>
+    <p>example coolservername.duckdns.org</p>
+    <p>coolservernamerequests.duckdns.org</p>
+    <p>coolservernamesignup.duckdns.org</p>
+    <p>These are the urls to enter in the Caddy/Reverse Proxy settings</p>
+    <h2>Caddy Setup</h2>
+    <p>If you entered in Caddy information in the settings when first installing then this should be set up</p>
+    <p>You can run the settings again and reapply them through the start menu > Wimps > Wimps Settings</p>
+    <p>Typical setup reverse proxies Jellyfin, JFA-GO, and Jellyseerr, DO NOT PUT SONARR/RADARR/PROWLARR behind reverse proxy</p>
+    <p>When asked for the localip and port the format is 192.x.x.x:xxxx</p>
+    <p>Typical Jellyfin server would be 192.168.0.44:8096</p>
     <h1>ProtonVPN</h1>
+    <h2>Profile</h2>
+    <p>Create a profile that connects to a country outside the USA and is set to fastest.</p>
+    <p>In proton vpn settings, set that profile as your main, and to connect automatically</p>
+    <h2>Split Tunnel</h2>
+    <p>In settings, advanced > enable split tunneling > only use vpn for specified app> select Qbittorrent</p>
+    <p>In qbittorrent > tools > options > network adapter > ProtonVPN</p>
     <h1>SABNZB</h1>
     <h1>Jellyseer</h1>
+    <p>Use WIMPSPortal to navigate to Jellyseerr, and run through the setup (Jellyfin and *ARR Apps must be set up before this)</p>
     <h1>*ARR Apps</h1>
-    <h1>Jellyfin</h1>
+    <p>Use the links to the right of the iframe to set up Sonarr, Radarr, and Prowlarr</p>
     <h1></h1>
   </div>
 </body>
