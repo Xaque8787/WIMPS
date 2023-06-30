@@ -78,21 +78,36 @@ This example displayes the jellyfin dashboard in the left, with sonarr and radar
 can be expanded to include other services. Such as
 
 <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin', 'qBittorrent'];</blockquote>
-    <h2>qBittorrent</h2>
+    <h1>qBittorrent</h1>
     
       <p>To properly get qBittorrent to display in the iframe</p>
       <p>qBittorrent > tools > options > webui > uncheck clickjacking protection and if using the webportal from a different machine then uncheck Enable Cross-Site Request Forgery Protection</p>
       <p>Change the port to 8081, as that is what the webportal is looking for</p>
-    <h2>SABNZB</h2>
+    <h1>SABNZB</h1>
     <p>To get sabnzb to display in the webportal iframe, access the webui in a seperate browser tab or window:</p>
     <p>sabnzb config (gear icon)> special > uncheck x_frame_options</p>
-<h2>EventGhost</h2>
+<h1>EventGhost</h1>
 <p>Open EventGhost and in the right hand pane where it says AutoStart :</p>
 <p> Right click AutoStart > add action > System > Start Application > locate the .bat or exe </p>
 <p>Make sure to set the working directory section to the same directory the .bat or .exe is</p>
-    <h2>Threadfin</h2>
+    <h1>Threadfin</h1>
     <p>Basic Threadfin Setup</p>
-    <p></p>
+    <p>Acess threadfin from the WIMPSPortal or at localhost:34400/web</p>
+    <p>Run through the wizard</p>
+    <p>Go to settings, at the bottom check the WEB Authentication box, then scroll up and hit save</p>
+    <p>Go back to threadfin and create/login</p>
+    <p>Go back to settings and scroll down and check all the boxes for m3u/xml.api authentication and save again, set any other settings like refresh interval, PPV Titles option, Tuner connection ammount, etc</p>
+    <p>Go to mapping and make sure channels are in the order you want and have epg data from provided xml</p>
+    <p>In the "server Information" section (hamberger icon) you will see a url for both the m3u and epg xml. Replace the username and pass with threadfin credentials.</p>
+    <p>In Jellyfin under Dashboard> Live TV> add m3u tuner and put in threadfin m3u url, add xmltv data and put in threadfin epg url</p>
+    <h1>*JFA-GO</h1>
+    <h1>Reverse Proxy</h1>
+    <h1>ProtonVPN</h1>
+    <h1>SABNZB</h1>
+    <h1>Jellyseer</h1>
+    <h1>*ARR Apps</h1>
+    <h1>Jellyfin</h1>
+    <h1></h1>
   </div>
 </body>
 </html>
