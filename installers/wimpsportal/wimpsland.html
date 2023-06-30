@@ -55,7 +55,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>WIMPS</h1>
+    <h1><u>WIMPS</u></h1>
 <p>Below is useful information for each service WIMPS may have installed. This is a rough draft and will be expanded in the future</p>
 <p>The initial landing page for the webportal can be changed to your liking. There is an example in %homepath%\wimps\installers\webportal\example_landing.html.
 This example displayes the jellyfin dashboard in the left, with sonarr and radarr filling out the rest of the page. You can rename example_landing to landing to replace the default page.</p>
@@ -69,6 +69,7 @@ This example displayes the jellyfin dashboard in the left, with sonarr and radar
 <p>Caddy : %homepath%/cadddy/caddyrun.bat</p>
 <p>DuckDNS updater : %HOMEPATH%\duckdns\Duckdns.exe</p>
 <p>JFA-GO : %HOMEPATH%\jfa</p>
+    <h2>iFrame Issues</h2>
 
     <p>Some services <b>do not load in the webportal iframe</b>, they will open in a new tab or window. If you're having an issue with a service displaying in the iframe see the below service for more details.</p>
    
@@ -78,19 +79,19 @@ This example displayes the jellyfin dashboard in the left, with sonarr and radar
 can be expanded to include other services. Such as
 
 <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin', 'qBittorrent'];</blockquote>
-    <h1>qBittorrent</h1>
+    <h1><u>qBittorrent</u></h1>
     
       <p>To properly get qBittorrent to display in the iframe</p>
       <p>qBittorrent > tools > options > webui > uncheck clickjacking protection and if using the webportal from a different machine then uncheck Enable Cross-Site Request Forgery Protection</p>
       <p>Change the port to 8081, as that is what the webportal is looking for</p>
-    <h1>SABNZB</h1>
+    <h1><u>SABNZB</u></h1>
     <p>To get sabnzb to display in the webportal iframe, access the webui in a seperate browser tab or window:</p>
     <p>sabnzb config (gear icon)> special > uncheck x_frame_options</p>
-<h1>EventGhost</h1>
+<h1><u>EventGhost</u></h1>
 <p>Open EventGhost and in the right hand pane where it says AutoStart :</p>
 <p> Right click AutoStart > add action > System > Start Application > locate the .bat or exe </p>
 <p>Make sure to set the working directory section to the same directory the .bat or .exe is</p>
-    <h1>Threadfin</h1>
+    <h1><u>Threadfin</u></h1>
     <p>Basic Threadfin Setup</p>
     <p>Acess threadfin from the WIMPSPortal or at localhost:34400/web</p>
     <p>Run through the wizard</p>
@@ -131,7 +132,6 @@ can be expanded to include other services. Such as
     <h2>Split Tunnel</h2>
     <p>In settings, advanced > enable split tunneling > only use vpn for specified app> select Qbittorrent</p>
     <p>In qbittorrent > tools > options > network adapter > ProtonVPN</p>
-    <h1><u>SABNZB</u></h1>
     <h1><u>Jellyseer</u></h1>
     <p>Use WIMPSPortal to navigate to Jellyseerr, and run through the setup (Jellyfin and *ARR Apps must be set up before this)</p>
     <h1><u>*ARR Apps</u></h1>
