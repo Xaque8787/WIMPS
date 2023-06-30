@@ -14,6 +14,7 @@ wget -O m3u_file.m3u %vodurl%
 "%PROGRAMFILES%\Python311\python.exe" %HOMEPATH%\m3uparser\parser.py
 timeout 3
 "%PROGRAMFILES%\Python311\python.exe" %HOMEPATH%\m3uparser\moviemover.py
+timeout 5
 "%PROGRAMFILES%\Python311\python.exe" %HOMEPATH%\m3uparser\tvshowmover.py
 cd %~dp0
 rmdir /s /q "%HOMEPATH%\m3uparser\Movie VOD"
