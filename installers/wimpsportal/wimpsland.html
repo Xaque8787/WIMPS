@@ -55,32 +55,31 @@
 </head>
 <body>
   <div class="container">
-    <h1><u>WIMPS</u></h1>
+<h1><u>WIMPS</u></h1>
 <p>Below is useful information for each service WIMPS may have installed. This is a rough draft and will be expanded in the future</p>
 <p>The initial landing page for the webportal can be changed to your liking. There is an example in %homepath%\wimps\installers\webportal\example_landing.html.
 This example displayes the jellyfin dashboard in the left, with sonarr and radarr filling out the rest of the page. You can rename example_landing to landing to replace the default page.</p>
     <h2>General Info</h2>
 <p><b>There now is a install auto start script that runs to install the below services to the auto start folder (except JFA-GO, use the tray icon to set auto start)</b>.</p>
-    <p><u>The below will be removed when re-writing the WIMPS landing page documentation.</u></p>
-<p>Some of these services <b>will not auto start on computer boot up</b>; Jellyseerr, Caddy, DuckDNS updater, JFA-GO</p>
-<p>You can use EventGhost, if installed with WIMPS, to auto start services on boot.  See below in EventGhost for examples.</p>
-<p>You can manually create shortcuts for those services and put them in %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup</p>
-<p>jellyseerr : %homepath%/wimps/installers/arr_apps/jsrun.bat</p>
-<p>Caddy : %homepath%/cadddy/caddyrun.bat</p>
-<p>DuckDNS updater : %HOMEPATH%\duckdns\Duckdns.exe</p>
-<p>JFA-GO : %HOMEPATH%\jfa</p>
+    <p>Before you run WIMPS and install anything, I would suggest you have these things below setup</p>
+    <p>DuckDNS account with 3 domains created (see below example), and your Duckdns api token</p>
+    <p>iptorrents account in donor status with m3u configured with 2 seperate configs, one for Live TV the other for borth MOVIE and TV SHOW VOD</p>
+    <p>m3u url to both LiveTV/VOD config and the epg url</p>
+    <p>ProtonVPN account if wanting to use with qBittorrent</p>
+    <p>Usenet accountand usenet indexer if using SABNZB </p>
+    <p>Domain name if wanting to redirect duckdns urls, with signle ssl cert per subdomain, not sure if wildcard subdomain will work.</p>
+    <p>OpenSubtitles account to use in Jellyfin, not necessary but nice. May need opensubtitles plugin from github to get the latest merge that allows .strm files to download subs (you're welcome :) )</p>
+    
     <h2>iFrame Issues</h2>
-
     <p>Some services <b>do not load in the webportal iframe</b>, they will open in a new tab or window. If you're having an issue with a service displaying in the iframe see the below service for more details.</p>
-   
-<p>You can edit portal.html loacated at %homepath%\wimps\installers\webportal\portal.html, and add services to the iframe exempt list, if you prefer that behavior or cant get a service to load in the iframe.<p>At line 110</p>
-<blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin'];</blockquote>
+    <p>You can edit portal.html loacated at %homepath%\wimps\installers\webportal\portal.html, and add services to the iframe exempt list, if you prefer that behavior or cant get a service to load in the iframe.<p>At line 110</p>
+    <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin'];</blockquote>
 
-can be expanded to include other services. Such as
+    <p>can be expanded to include other services. Such as</p>
 
 <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin', 'qBittorrent'];</blockquote>
-    <h1><u>qBittorrent</u></h1>
     
+<h1><u>qBittorrent</u></h1>
       <p>To properly get qBittorrent to display in the iframe</p>
       <p>qBittorrent > tools > options > webui > uncheck clickjacking protection and if using the webportal from a different machine then uncheck Enable Cross-Site Request Forgery Protection</p>
       <p>Change the port to 8081, as that is what the webportal is looking for</p>
@@ -107,16 +106,16 @@ can be expanded to include other services. Such as
     <p>For the creaeted user uncheck allow Video playback that requires transcoding</p>
     <p>On your jellyfin client, if on android TV, you must uncheck the box for LiveTv playback in the settings that has to do with transcoding.</p>
     <p>On your jellyfin client, set the player for media playback(not live tv playback) to always ask. I tend to use Libvlc as my main but its nice to have the option if something doesnt work.</p> 
-<p>Uncheck Force transcoding of remote media sources such as Live TV</p>
+    <p>Uncheck Force transcoding of remote media sources such as Live TV</p>
     <p>The above are generic settings that should work out of the box, if you have the hardware or want to set up transcoding go ahead, this guide will not cover that. I can say it does work well, as I have used a QuadroP400 with great results for both live tv and movies/shows.</p>
     <p>In dashboard>library>set up Movie and TV folder pointed to the location set in WIMPS settings, make sure Real Time Monitoring is enabled</p>
-<p>I personally set up 2 movie libraries and 2 tv show libraries. Movies, Movie Requests, Tv Shows, Show Requests</p>
+    <p>I personally set up 2 movie libraries and 2 tv show libraries. Movies, Movie Requests, Tv Shows, Show Requests</p>
     <p>The Request Libraries are pointed to a seperate set of folders that are not your VOD folder. I use ..\local\localmovie and ...\local\localtv as my root folders for each Radarr and Sonarr. It helps keep requested content seperate from VOD library.</p>
     <p>See threadfin for live tv setup</p>
     <h1><u>JFA-GO</u></h1>
     <p>Run the jfa.exe in %homepath%/jfa</p>
     <p>Run through the setup, and enable auto start with the tray icon</p>
-    <h1><u>Reverse Proxy</u></h1>
+<h1><u>Reverse Proxy</u></h1>
     <h2>DuckDNS</h2>
     <p>Sign in to DuckDNS and create three domains, one each for; Jellyfin server, Jellyseerr, and JFA-GO</p>
     <p>example</p>
@@ -130,16 +129,16 @@ can be expanded to include other services. Such as
     <p>Typical setup reverse proxies Jellyfin, JFA-GO, and Jellyseerr, DO NOT PUT SONARR/RADARR/PROWLARR behind reverse proxy</p>
     <p>When asked for the localip and port the format is 192.x.x.x:xxxx</p>
     <p>Typical Jellyfin server would be 192.168.0.44:8096</p>
-    <h1><u>ProtonVPN</u></h1>
+<h1><u>ProtonVPN</u></h1>
     <h2>Profile</h2>
     <p>Create a profile that connects to a country outside the USA and is set to fastest.</p>
     <p>In proton vpn settings, set that profile as your main, and to connect automatically</p>
     <h2>Split Tunnel</h2>
     <p>In settings, advanced > enable split tunneling > only use vpn for specified app> select Qbittorrent</p>
     <p>In qbittorrent > tools > options > network adapter > ProtonVPN</p>
-    <h1><u>Jellyseer</u></h1>
+<h1><u>Jellyseer</u></h1>
     <p>Use WIMPSPortal to navigate to Jellyseerr, and run through the setup (Jellyfin and *ARR Apps must be set up before this)</p>
-    <h1><u>*ARR Apps</u></h1>
+<h1><u>*ARR Apps</u></h1>
     <p>Use the links to the right of the iframe to set up Sonarr, Radarr, and Prowlarr</p>
     <h1></h1>
   </div>
