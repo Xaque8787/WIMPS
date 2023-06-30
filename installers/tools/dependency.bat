@@ -6,6 +6,7 @@ set "TargetFolder=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 set "TargetPath1=%homepath%\caddy\caddyrun.bat"
 set "TargetPath2=%homepath%\wimps\installers\arr_apps\jsrun.bat"
 set "TargetPath3=%homepath%\duckdns\DuckDNS.exe"
+set "TargetPath4=%homepath%\Threadfin-main\threadfin.exe"
 
 echo Creating shortcuts...
 echo.
@@ -57,6 +58,21 @@ if exist "%TargetPath3%" (
     echo Shortcut 3 created.
 ) else (
     echo File does not exist. Skipping shortcut 3 creation.
+)
+
+echo Shortcut 4:
+echo Target Path: %TargetPath4%
+echo Working Directory: %homepath%\Threadfin-main
+echo.
+
+for %%I in ("%TargetPath4%") do set "FileName4=%%~nI"
+set "WorkingDirectory4=%~d0%homepath%\Threadfin-main"
+
+if exist "%TargetPath4%" (
+    powershell -Command "$WS = New-Object -ComObject WScript.Shell; $Shortcut = $WS.CreateShortcut('%TargetFolder%\\%FileName4%.lnk'); $Shortcut.TargetPath = '%TargetPath4%'; $Shortcut.WorkingDirectory = '%WorkingDirectory4%'; $Shortcut.Save()"
+    echo Shortcut 4 created.
+) else (
+    echo File does not exist. Skipping shortcut 4 creation.
 )
 
 echo.
