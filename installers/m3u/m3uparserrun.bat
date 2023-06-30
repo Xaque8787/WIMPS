@@ -16,6 +16,7 @@ timeout 3
 "%PROGRAMFILES%\Python311\python.exe" %HOMEPATH%\m3uparser\moviemover.py
 timeout 5
 "%PROGRAMFILES%\Python311\python.exe" %HOMEPATH%\m3uparser\tvshowmover.py
+timeout 5
 cd %~dp0
 rmdir /s /q "%HOMEPATH%\m3uparser\Movie VOD"
 rmdir /s /q "%HOMEPATH%\m3uparser\TV VOD"
