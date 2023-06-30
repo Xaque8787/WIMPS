@@ -60,6 +60,8 @@ if exist "%TargetPath3%" (
     echo File does not exist. Skipping shortcut 3 creation.
 )
 
+echo.
+
 echo Shortcut 4:
 echo Target Path: %TargetPath4%
 echo Working Directory: %homepath%\Threadfin-main
