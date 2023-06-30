@@ -429,6 +429,8 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
 :next
 rem copy /y "mainlist.cfg" "installers\mainlist.cfg"
 echo.> appins.cfg
+echo installing auto-start shortcuts...
+start "" /wait /b cmd.exe /c ..\tools\dependency.bat 
 echo running settings...
 start cmd.exe /c settings.bat
 timeout 5
