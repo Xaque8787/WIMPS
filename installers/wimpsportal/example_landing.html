@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      height: 100%;
+    }
+
+    .left-frame {
+      flex-basis: 33%;
+      height: 100%;
+    }
+
+    .right-frames {
+      flex-basis: 66%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right-frame {
+      flex-grow: 1;
+    }
+
+    .iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-frame">
+      <iframe class="iframe" src="http://localhost:8096"></iframe>
+    </div>
+    <div class="right-frames">
+      <div class="right-frame">
+        <iframe class="iframe" src="http://localhost:7878"></iframe>
+      </div>
+      <div class="right-frame">
+        <iframe class="iframe" src="http://localhost:8989"></iframe>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
