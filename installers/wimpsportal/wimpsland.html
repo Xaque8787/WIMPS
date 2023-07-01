@@ -89,6 +89,11 @@
 <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin', 'qBittorrent'];</blockquote>
 
 <h1><u>M3UParser</u></h1>
+    <h2>M3UParserrun.bat</h2>
+    <p>In the WIMPS settings (runs after installing applications), once you enter a destination folder and your VOD m3u url, it will create the VOD .strm libraries at your destination. i.e C:Users\Documents</p>
+    <p> Follow the bewlow instructions to create a task to run daily, that runs this bat file, which will download your VOD m3u, and add any updated movie or tv show to your destination folders. i.e the script will output too the created C:Users\Documents\TV VOD and C:Users\Documents\Movie VOD
+    which is where you will point the Jellyfin libraries for Movies and TV Shows too.</p>
+    <h2>Daily run task scheduler</h2>
     <p>Start menue > type "Task Scheduler"</p>
     <p>Action > create task > </p>
      <p>General TAB> enter a name, change drop down "Configure for:" to Windows10 </p>
