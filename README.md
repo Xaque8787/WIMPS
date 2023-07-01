@@ -36,3 +36,6 @@ Download the repository and unzip to any location. Run the install_script, which
 - ProntonMail account to use ProtonVPN. (optional for use with QbitTorrent)
 - Usenet and Indexer account if using Sabnzb for *arr apps.
 - this script will install these services/apps as pre requirements; pyton3, node.js, yarn, go, wget, 7zip
+
+# Screen Shots
+![wimpsscrn1](https://github.com/Xaque8787/WIMPS/assets/65569846/56a5660e-eac4-45ef-bd72-39cfc06a989f)
