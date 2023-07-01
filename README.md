@@ -39,7 +39,7 @@ Download the repository and unzip to any location. Run the install_script, which
 
 # Screen Shots
 Landing page with multiple services showing. Can be customized
-![wimpsscrn1](https://github.com/Xaque8787/WIMPS/assets/65569846/56a5660e-eac4-45ef-bd72-39cfc06a989f)
+<img src="https://github.com/Xaque8787/WIMPS/assets/65569846/56a5660e-eac4-45ef-bd72-39cfc06a989f">
 Sonarr in iframe - not all servies work in iframe, if not they will load in new tab or window.
 ![wimpsscrn4](https://github.com/Xaque8787/WIMPS/assets/65569846/03722a31-1fc5-43e3-8078-2f07f8920889)
 Reverse proxy setup - automatically creates a working caddyfile based on your provided info.
