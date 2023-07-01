@@ -8,24 +8,24 @@
 Download the repository and unzip to any location. Run the install_script, which will install a desktop icon and start menu icon. Start either as an Administrator to complete the setup.
 
 # Available Apps
-Jellyfin - Media Server
-JFA-go - Jellyfin user management app, invite users with a url link
-Jellyseerr - Request Movies and TV SHows
-SABNZB - Download client for Usenet
-qBittorrent - Download client
-Radarr - Movie collection manager
-Sonarr - TV show collection manager
-Prowlarr - Indexer manager for Sonarr and Radarr
-Threadfin - m3u/epg manager
-m3uparser - m3u to .strm library scripts
-Caddy - Reverse Proxy
-DuckDNS - Updater app for duckdns.org
-ProtonVPN - VPN with split tunneling for use qBittorrent
-EventGhost - system automation tool
-notepad++ - code editor
-Chrome - web browser
-Firefox - web browser
-windirstat - disk usage statistics viewer
+<p>Jellyfin - Media Server</p>
+<p>JFA-go - Jellyfin user management app, invite users with a url link</p>
+<p>Jellyseerr - Request Movies and TV SHows</p>
+<p>SABNZB - Download client for Usenet</p>
+<p>qBittorrent - Download client</p>
+<p>Radarr - Movie collection manager</p>
+<p>Sonarr - TV show collection manager</p>
+<p>Prowlarr - Indexer manager for Sonarr and Radarr</p>
+<p>Threadfin - m3u/epg manager</p>
+<p>m3uparser - m3u to .strm library scripts</p>
+<p>Caddy - Reverse Proxy</p>
+<p>DuckDNS - Updater app for duckdns.org</p>
+<p>ProtonVPN - VPN with split tunneling for use qBittorrent</p>
+<p>EventGhost - system automation tool</p>
+<p>notepad++ - code editor</p>
+<p>Chrome - web browser</p>
+<p>Firefox - web browser</p>
+<p>windirstat - disk usage statistics viewer</p>
 
 
 # Requirements
