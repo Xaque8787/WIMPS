@@ -57,10 +57,16 @@
   <div class="container">
 <h1><u>WIMPS</u></h1>
     <p>Below is useful information for each service WIMPS may have installed. This is a rough draft and will be expanded in the future</p>
-    <p>The initial landing page for the webportal can be changed to your liking. There is an example in %homepath%\wimps\installers\webportal\example_landing.html.
-       This example displayes the jellyfin dashboard in the left, with sonarr and radarr filling out the rest of the page. You can rename example_landing to landing to replace the default page.</p>
+    <p>The initial landing page for the webportal(currently blank) can be changed to your liking. There is an example in %homepath%\wimps\installers\webportal\example_landing.html.</p>
+    <p>This example displayes the jellyfin dashboard in the left, with sonarr and radarr filling out the rest of the page. You can rename "example_landing.html" to "landing.html" to replace the default blank page.</p>
+    <p>While WIMPS can be ran on a pre-existing system that is used for other purposes than a media server, the ideal environment is on a clean windows install, that is fully up to date.</p>
+    <p>Some windows settings that may be useful</p>
+    <p>-Set up a password on your current user then start menu > run > netplwiz > uncheck the box about sign in. This allows computer to boot directly to desktop bypassing sign in page.</p>
+    <p>--even if you have no password set, on boot you'll need to click to sign in, which is a pain if running headless after initial setup</p>
+    <p>You should set up a specific time for windows to update. Early AM like 6 works unless you have users that watch during that hour. Also avoid conflicts with Jellyfin Scheduled Tasks</p>
+    <p>You will need to create a scheduled task to download and update your VOD content. See M3U below for setup</p>
     <h2>General Info</h2>
-    <p><b>There now is a install auto start script that runs to install the below services to the auto start folder (except JFA-GO, use the tray icon to set auto start)</b>.</p>
+    <p><b>Auto-Start Programs:</b>Some apps that dont have start on boot have a shortcut created to the startup folder. Caddy(reverse proxy), Jellyseerr, DuckDns. DOES NOT include JFA-GO (see below)</p>
     <p><u>Before you run WIMPS and install anything, I would suggest you have these things below setup</u><p>
     <p>DuckDNS account with 3 domains created (see below example), and your Duckdns api token</p>
     <p>iptorrents account in donor status with m3u configured with 2 seperate configs, one for Live TV the other for borth MOVIE and TV SHOW VOD</p>
@@ -81,7 +87,14 @@
     <p>can be expanded to include other services. Such as</p>
 
 <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin', 'qBittorrent'];</blockquote>
-    
+
+<h1><u>M3U</u></h1>
+    <p>Start menue > type "Task Scheduler"</p>
+    <p>Action > create task > </p>
+     <p>General TAB> enter a name, change drop down "Configure for:" to Windows10 </p>
+     <p>Triggers TAB> new > every day at X hour  </p>
+    <p>Actions TAB> New > Browse > %homepath%\m3u\m3uparserrun.bat > Start in %homepath%\m3u\ (do not use %homepath% enter the absolute path, can be found by entering the %homepath%\m3u in file explorer </p>
+    <p>Conditions TAB and Settings TAB> you preference as it may depend on what hardware you're running. Default values should work.</p>
 <h1><u>qBittorrent</u></h1>
     <p>To properly get qBittorrent to display in the iframe</p>
     <p>qBittorrent > tools > options > webui > uncheck clickjacking protection and if using the webportal from a different machine then uncheck Enable Cross-Site Request Forgery Protection</p>
@@ -118,11 +131,14 @@
     <p>See threadfin for live tv setup</p>
     <h1><u>JFA-GO</u></h1>
     <p>Run the jfa.exe in %homepath%/jfa</p>
-    <p>Run through the setup, and enable auto start with the tray icon</p>
+    <p>Run through the setup, and <b>enable auto start with the tray icon</b></p>
+    <p>Basic setup does not need to include email service unless you need people to be able to reset their own password</p>
+    <p>After wizard, before you make an invite url, go to settings > check advanced > User Profile > Select a jellyfin account to act as a default profile for newly signed up users.</p>
+      <p>-make a user in Jellfin and restart JFA-go if you havent created a non admin user yet</p>
 <h1><u>Reverse Proxy</u></h1>
     <h2>DuckDNS</h2>
-    <p>Sign in to DuckDNS and create three domains, one each for; Jellyfin server, Jellyseerr, and JFA-GO</p>
-    <p>example</p>
+    <p>Sign in to DuckDNS.org and create three domains, one each for; Jellyfin server, Jellyseerr, and JFA-GO</p>
+    <p>example, notice NO https://</p>
     <p>coolservername.duckdns.org</p>
     <p>coolservernamerequests.duckdns.org</p>
     <p>coolservernamesignup.duckdns.org</p>
