@@ -93,20 +93,24 @@
     <p>Action > create task > </p>
      <p>General TAB> enter a name, change drop down "Configure for:" to Windows10 </p>
      <p>Triggers TAB> new > every day at X hour  </p>
-    <p>Actions TAB> New > Browse > %homepath%\m3u\m3uparserrun.bat > Start in %homepath%\m3u\ (do not use %homepath% enter the absolute path, can be found by entering the %homepath%\m3u in file explorer) </p>
+    <p>Actions TAB> New > Browse > %homepath%\m3u\m3uparserrun.bat (<b>NOT! m3uparser.bat</b>) > Start in %homepath%\m3u\ (do not use %homepath%, enter the <b>absolute path</b>, can be found by entering the %homepath%\m3u in file explorer) </p>
     <p>Conditions TAB and Settings TAB> you preference as it may depend on what hardware you're running. Default values should work.</p>
 <h1><u>qBittorrent</u></h1>
     <p>To properly get qBittorrent to display in the iframe</p>
     <p>qBittorrent > tools > options > webui > uncheck clickjacking protection and if using the webportal from a different machine then uncheck Enable Cross-Site Request Forgery Protection</p>
-    <p>Change the port to 8081, as that is what the webportal is looking for</p>
+    <p><b>Change the port to 8081</b>, as that is what the webportal is looking for</p>
     <p>If using Proton VPN, set up split tunneling(see below) then apply in qBittorrent by going to qbittorrent > tools > options > network adapter > ProtonVPN</p>
 <h1><u>SABNZB</u></h1>
     <p>To get sabnzb to display in the webportal iframe, access the webui in a seperate browser tab or window:</p>
     <p>sabnzb config (gear icon)> special > uncheck x_frame_options</p>
 <h1><u>EventGhost</u></h1>
+    <h2>Auto-Start</h2>
     <p>Open EventGhost and in the right hand pane where it says AutoStart :</p>
     <p> Right click AutoStart > add action > System > Start Application > locate the .bat or exe </p>
     <p>Make sure to set the working directory section to the same directory the .bat or .exe is</p>
+    <h2>Useful plugins (tutorials for below soon to come)</h2>
+    <p>Network Event Sender/Reciever - great for sending commands from pc to pc in local network. Install reciever on hedless server, install sender on your main pc.</p>
+    <p>Auto-Remote Tasker - can send commands to server from out of local network. Great for restarting services with your phone while out and about</p>
 <h1><u>Threadfin</u></h1>
     <p>Basic Threadfin Setup, if you did not restart your computer after WIMPS installed the selected apps, then run as administrator "threadfinrun.bat" located at %homepath%\wimps\m3u\threadfinrun.bat, or run the .exe located at %homepath%\.threadfin\threadfin.exe</p>
     <p>Acess threadfin from the WIMPSPortal or at localhost:34400/web</p>
