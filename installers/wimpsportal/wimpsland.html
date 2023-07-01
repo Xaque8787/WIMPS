@@ -117,24 +117,26 @@
     <p>Go to mapping and make sure channels are in the order you want and have epg data from provided xml</p>
     <p>In the "server Information" section (hamberger icon) you will see a url for both the m3u and epg xml. Replace the username and pass with threadfin credentials.</p>
     <p>In Jellyfin under Dashboard> Live TV> add m3u tuner and put in threadfin m3u url, add xmltv data and put in threadfin epg url</p>
-    <h1><u>Jellyfin</u></h1>
+<h1><u>Jellyfin</u></h1>
     <p>Run through the jellyfin wizard</p>
-    <p>For the creaeted user uncheck "allow auido playback that requires transcoding"</p>
-    <p>For the creaeted user uncheck allow Video playback that requires transcoding</p>
-    <p>On your jellyfin client, if on android TV, you must uncheck the box for LiveTv playback in the settings that has to do with transcoding.</p>
-    <p>On your jellyfin client, set the player for media playback(not live tv playback) to always ask. I tend to use Libvlc as my main but its nice to have the option if something doesnt work.</p> 
+    <p>For the created user uncheck "allow auido playback that requires transcoding"</p>
+    <p>For the created user uncheck allow Video playback that requires transcoding</p>
     <p>Uncheck Force transcoding of remote media sources such as Live TV</p>
+    
+    <p>On your <b>jellyfin client</b>, if on android TV, you must uncheck the box for LiveTv playback in the settings that has to do with transcoding.</p>
+    <p>On your <b>jellyfin client</b>, set the player for media playback(not live tv playback) to always ask. I tend to use Libvlc as my main but its nice to have the option if something doesnt work.</p> 
     <p>The above are generic settings that should work out of the box, if you have the hardware or want to set up transcoding go ahead, this guide will not cover that. I can say it does work well, as I have used a QuadroP400 with great results for both live tv and movies/shows.</p>
     <p>In dashboard>library>set up Movie and TV folder pointed to the location set in WIMPS settings, make sure Real Time Monitoring is enabled</p>
-    <p>I personally set up 2 movie libraries and 2 tv show libraries. Movies, Movie Requests, Tv Shows, Show Requests</p>
-    <p>The Request Libraries are pointed to a seperate set of folders that are not your VOD folder. I use ..\local\localmovie and ...\local\localtv as my root folders for each Radarr and Sonarr. It helps keep requested content seperate from VOD library.</p>
+    <p>I personally set up 2 movie libraries and 2 tv show libraries. Movies, Movie Requests, Tv Shows, Show Requests. Request libraries shoukd be created manually where ever youd'd like. Radarr and Sonarr should have these directories set as root</p>
+    <p>The Request Libraries are pointed to a seperate set of folders that are not your VOD folder. I use ..\local\localmovie and ..\local\localtv as my root folders for each Radarr and Sonarr. It helps keep requested content seperate from VOD library.</p>
+    <p>That way if you have to rebuild your VOD library for whatever reason your downloaded content will remain seperated.</p>
     <p>See threadfin for live tv setup</p>
     <h1><u>JFA-GO</u></h1>
     <p>Run the jfa.exe in %homepath%/jfa</p>
     <p>Run through the setup, and <b>enable auto start with the tray icon</b></p>
     <p>Basic setup does not need to include email service unless you need people to be able to reset their own password</p>
     <p>After wizard, before you make an invite url, go to settings > check advanced > User Profile > Select a jellyfin account to act as a default profile for newly signed up users.</p>
-      <p>-make a user in Jellfin and restart JFA-go if you havent created a non admin user yet</p>
+    <p>-make a user in Jellfin and restart JFA-go if you havent created a non admin user yet</p>
 <h1><u>Reverse Proxy</u></h1>
     <h2>DuckDNS</h2>
     <p>Sign in to DuckDNS.org and create three domains, one each for; Jellyfin server, Jellyseerr, and JFA-GO</p>
@@ -161,8 +163,12 @@
     <p>In qbittorrent > tools > options > network adapter > ProtonVPN</p>
 <h1><u>Jellyseer</u></h1>
     <p>Use WIMPSPortal to navigate to Jellyseerr, and run through the setup (Jellyfin and *ARR Apps must be set up before this)</p>
+    <p>Jellyseerr is well documented, use the links on the right to join discord if you dont know how to configure set up.</p>
 <h1><u>*ARR Apps</u></h1>
     <p>Use the links to the right of the iframe to set up Sonarr, Radarr, and Prowlarr</p>
+    <p>There are too many quality settings and personal decisions to setting up the arr apps, I suggest using the links to figure out your ideal setup</p>
+    <p>Too keep things light on my server I use a 720p/1080p mixed profile with a set size limit for my indexers so it grabs the best quality to size that I acceptable.</p>
+    <p>Creating a thrid local directory for Anime is a good idea if you're going to make anime requests.</p>
     <h1></h1>
   </div>
 </body>
