@@ -10,7 +10,7 @@ Download the repository and unzip to any location. Run the install_script, which
 # Available Apps
 <p>Jellyfin - Media Server</p>
 <p>JFA-go - Jellyfin user management app, invite users with a url link</p>
-<p>Jellyseerr - Request Movies and TV SHows</p>
+<p>Jellyseerr - Request Movies and TV Shows</p>
 <p>SABNZB - Download client for Usenet</p>
 <p>qBittorrent - Download client</p>
 <p>Radarr - Movie collection manager</p>
