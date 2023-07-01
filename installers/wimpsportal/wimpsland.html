@@ -119,11 +119,12 @@
     <p>Go to mapping and make sure channels are in the order you want and have epg data from provided xml</p>
     <p>In the "server Information" section (hamberger icon) you will see a url for both the m3u and epg xml. Replace the username and pass with threadfin credentials.</p>
     <p>In Jellyfin under Dashboard> Live TV> add m3u tuner and put in threadfin m3u url, add xmltv data and put in threadfin epg url</p>
+    <p>IN JELLYFIN - Set the number of allowed streams in M3U tuner setup to how many connections your account allows.</p>
 <h1><u>Jellyfin</u></h1>
     <p>Run through the jellyfin wizard</p>
     <p>For the created user uncheck "allow auido playback that requires transcoding"</p>
-    <p>For the created user uncheck allow Video playback that requires transcoding</p>
-    <p>Uncheck Force transcoding of remote media sources such as Live TV</p>
+    <p>For the created user uncheck "allow Video playback that requires transcoding"</p>
+    <p>Uncheck "Force transcoding of remote media sources such as Live TV"</p>
     
     <p>On your <b>jellyfin client</b>, if on android TV, you must uncheck the box for LiveTv playback in the settings that has to do with transcoding.</p>
     <p>On your <b>jellyfin client</b>, set the player for media playback(not live tv playback) to always ask. I tend to use Libvlc as my main but its nice to have the option if something doesnt work.</p> 
@@ -170,7 +171,7 @@
     <p>Use the links to the right of the iframe to set up Sonarr, Radarr, and Prowlarr</p>
     <p>There are too many quality settings and personal decisions to setting up the arr apps, I suggest using the links to figure out your ideal setup</p>
     <p>Too keep things light on my server I use a 720p/1080p mixed profile with a set size limit for my indexers so it grabs the best quality to size that I acceptable.</p>
-    <p>Creating a thrid local directory for Anime is a good idea if you're going to make anime requests.</p>
+    <p>Creating a thrid local directory for Anime is a good idea if you're going to make anime requests.</p>    
     <h1><u>EventGhost</u></h1>
     <h2>Auto-Start</h2>
     <p>Open EventGhost and in the right hand pane where it says AutoStart :</p>
