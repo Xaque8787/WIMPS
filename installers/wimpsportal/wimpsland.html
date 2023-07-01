@@ -61,10 +61,13 @@
        This example displayes the jellyfin dashboard in the left, with sonarr and radarr filling out the rest of the page. You can rename example_landing to landing to replace the default page.</p>
     <h2>General Info</h2>
     <p><b>There now is a install auto start script that runs to install the below services to the auto start folder (except JFA-GO, use the tray icon to set auto start)</b>.</p>
-    <p>Before you run WIMPS and install anything, I would suggest you have these things below setup</p>
+    <p><u>Before you run WIMPS and install anything, I would suggest you have these things below setup</u><p>
     <p>DuckDNS account with 3 domains created (see below example), and your Duckdns api token</p>
     <p>iptorrents account in donor status with m3u configured with 2 seperate configs, one for Live TV the other for borth MOVIE and TV SHOW VOD</p>
-    <p>m3u url to both LiveTV/VOD config and the epg url</p>
+    <p>Your iptorrents cookie/useragent. In a chrome browser sign into iptorrents account. hit 12 and go to network tab, refresh page (f5), find main.js or start.js and scroll down to find cookie:</p>
+    <p>-The cookie format should be as it appears but without the space after the ;</p>
+    <p>-The useragent should be listed at the end of the request headers tab</p>
+    <p>m3u url to both LiveTV and VOD config, and the epg url</p>
     <p>ProtonVPN account if wanting to use with qBittorrent</p>
     <p>Usenet accountand usenet indexer if using SABNZB </p>
     <p>Domain name if wanting to redirect duckdns urls, with signle ssl cert per subdomain, not sure if wildcard subdomain will work.</p>
