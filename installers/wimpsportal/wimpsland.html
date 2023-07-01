@@ -56,11 +56,11 @@
 <body>
   <div class="container">
 <h1><u>WIMPS</u></h1>
-<p>Below is useful information for each service WIMPS may have installed. This is a rough draft and will be expanded in the future</p>
-<p>The initial landing page for the webportal can be changed to your liking. There is an example in %homepath%\wimps\installers\webportal\example_landing.html.
-This example displayes the jellyfin dashboard in the left, with sonarr and radarr filling out the rest of the page. You can rename example_landing to landing to replace the default page.</p>
+    <p>Below is useful information for each service WIMPS may have installed. This is a rough draft and will be expanded in the future</p>
+    <p>The initial landing page for the webportal can be changed to your liking. There is an example in %homepath%\wimps\installers\webportal\example_landing.html.
+       This example displayes the jellyfin dashboard in the left, with sonarr and radarr filling out the rest of the page. You can rename example_landing to landing to replace the default page.</p>
     <h2>General Info</h2>
-<p><b>There now is a install auto start script that runs to install the below services to the auto start folder (except JFA-GO, use the tray icon to set auto start)</b>.</p>
+    <p><b>There now is a install auto start script that runs to install the below services to the auto start folder (except JFA-GO, use the tray icon to set auto start)</b>.</p>
     <p>Before you run WIMPS and install anything, I would suggest you have these things below setup</p>
     <p>DuckDNS account with 3 domains created (see below example), and your Duckdns api token</p>
     <p>iptorrents account in donor status with m3u configured with 2 seperate configs, one for Live TV the other for borth MOVIE and TV SHOW VOD</p>
@@ -80,17 +80,18 @@ This example displayes the jellyfin dashboard in the left, with sonarr and radar
 <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin', 'qBittorrent'];</blockquote>
     
 <h1><u>qBittorrent</u></h1>
-      <p>To properly get qBittorrent to display in the iframe</p>
-      <p>qBittorrent > tools > options > webui > uncheck clickjacking protection and if using the webportal from a different machine then uncheck Enable Cross-Site Request Forgery Protection</p>
-      <p>Change the port to 8081, as that is what the webportal is looking for</p>
-    <h1><u>SABNZB</u></h1>
+    <p>To properly get qBittorrent to display in the iframe</p>
+    <p>qBittorrent > tools > options > webui > uncheck clickjacking protection and if using the webportal from a different machine then uncheck Enable Cross-Site Request Forgery Protection</p>
+    <p>Change the port to 8081, as that is what the webportal is looking for</p>
+    <p>If using Proton VPN, set up split tunneling(see below) then apply in qBittorrent by going to qbittorrent > tools > options > network adapter > ProtonVPN</p>
+<h1><u>SABNZB</u></h1>
     <p>To get sabnzb to display in the webportal iframe, access the webui in a seperate browser tab or window:</p>
     <p>sabnzb config (gear icon)> special > uncheck x_frame_options</p>
 <h1><u>EventGhost</u></h1>
-<p>Open EventGhost and in the right hand pane where it says AutoStart :</p>
-<p> Right click AutoStart > add action > System > Start Application > locate the .bat or exe </p>
-<p>Make sure to set the working directory section to the same directory the .bat or .exe is</p>
-    <h1><u>Threadfin</u></h1>
+    <p>Open EventGhost and in the right hand pane where it says AutoStart :</p>
+    <p> Right click AutoStart > add action > System > Start Application > locate the .bat or exe </p>
+    <p>Make sure to set the working directory section to the same directory the .bat or .exe is</p>
+<h1><u>Threadfin</u></h1>
     <p>Basic Threadfin Setup, if you did not restart your computer after WIMPS installed the selected apps, then run as administrator "threadfinrun.bat" located at %homepath%\wimps\m3u\threadfinrun.bat, or run the .exe located at %homepath%\.threadfin\threadfin.exe</p>
     <p>Acess threadfin from the WIMPSPortal or at localhost:34400/web</p>
     <p>Run through the wizard</p>
@@ -123,12 +124,15 @@ This example displayes the jellyfin dashboard in the left, with sonarr and radar
     <p>coolservernamerequests.duckdns.org</p>
     <p>coolservernamesignup.duckdns.org</p>
     <p>These are the urls to enter in the Caddy/Reverse Proxy settings</p>
+    <p>Double-click the tray icon, and one of your duckdns urls and your api token</p>
+    <p>Set update interval to your liking.</p>
+    <p>In the settings, add your other two duckdns urls</p>
     <h2>Caddy Setup</h2>
     <p>If you entered in Caddy information in the settings when first installing then this should be set up</p>
     <p>You can run the settings again and reapply them through the start menu > Wimps > Wimps Settings</p>
-    <p>Typical setup reverse proxies Jellyfin, JFA-GO, and Jellyseerr, DO NOT PUT SONARR/RADARR/PROWLARR behind reverse proxy</p>
+    <p>Typical setup reverse proxies Jellyfin, JFA-GO, and Jellyseerr, DO NOT PUT Sonarr/Radarr/Prowlarr behind reverse proxy</p>
     <p>When asked for the localip and port the format is 192.x.x.x:xxxx</p>
-    <p>Typical Jellyfin server would be 192.168.0.44:8096</p>
+    <p>An example Jellyfin server would be 192.168.0.44:8096</p>
 <h1><u>ProtonVPN</u></h1>
     <h2>Profile</h2>
     <p>Create a profile that connects to a country outside the USA and is set to fastest.</p>
