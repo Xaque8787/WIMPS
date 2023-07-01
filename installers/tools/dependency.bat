@@ -80,3 +80,4 @@ if exist "%TargetPath4%" (
 echo.
 echo All shortcuts created successfully.
 timeout 5
+exit /b
