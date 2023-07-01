@@ -39,3 +39,6 @@ Download the repository and unzip to any location. Run the install_script, which
 
 # Screen Shots
 ![wimpsscrn1](https://github.com/Xaque8787/WIMPS/assets/65569846/56a5660e-eac4-45ef-bd72-39cfc06a989f)
+![wimpsscrn4](https://github.com/Xaque8787/WIMPS/assets/65569846/03722a31-1fc5-43e3-8078-2f07f8920889)
+![wimpsscrn3](https://github.com/Xaque8787/WIMPS/assets/65569846/fd5c661e-b187-4fe9-a1b8-6129e643cfc7)
+![wimpsscrn2](https://github.com/Xaque8787/WIMPS/assets/65569846/34ea2c89-75e6-4c40-b230-c01dcb4f8c8c)
