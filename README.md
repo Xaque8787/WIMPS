@@ -6,6 +6,28 @@
 
 # Instalation
 Download the repository and unzip to any location. Run the install_script, which will install a desktop icon and start menu icon. Start either as an Administrator to complete the setup.
+
+# Available Apps
+Jellyfin - Media Server
+JFA-go - Jellyfin user management app, invite users with a url link
+Jellyseerr - Request Movies and TV SHows
+SABNZB - Download client for Usenet
+qBittorrent - Download client
+Radarr - Movie collection manager
+Sonarr - TV show collection manager
+Prowlarr - Indexer manager for Sonarr and Radarr
+Threadfin - m3u/epg manager
+m3uparser - m3u to .strm library scripts
+Caddy - Reverse Proxy
+DuckDNS - Updater app for duckdns.org
+ProtonVPN - VPN with split tunneling for use qBittorrent
+EventGhost - system automation tool
+notepad++ - code editor
+Chrome - web browser
+Firefox - web browser
+windirstat - disk usage statistics viewer
+
+
 # Requirements
 - public IP address (no cgnat support yet)
 - port 80 and 443 forwarded from your router to the local ip address of the machine running WIMPS/reverse proxy.
