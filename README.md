@@ -39,10 +39,10 @@ Download the repository and unzip to any location. Run the install_script, which
 
 # Screen Shots
 ![wimpsscrn1](https://github.com/Xaque8787/WIMPS/assets/65569846/56a5660e-eac4-45ef-bd72-39cfc06a989f)
-Landing page with multiple services showing. Can be customized.
+<h2>Landing page with multiple services showing. Can be customized.</h2>
 ![wimpsscrn4](https://github.com/Xaque8787/WIMPS/assets/65569846/03722a31-1fc5-43e3-8078-2f07f8920889)
-Sonarr in iframe - not all servies work in iframe, they will load in new tab or window.
+<h2>Sonarr in iframe - not all servies work in iframe, they will load in new tab or window.</h2>
 ![wimpsscrn3](https://github.com/Xaque8787/WIMPS/assets/65569846/fd5c661e-b187-4fe9-a1b8-6129e643cfc7)
-Reverse proxy setup - automatically creates a working caddyfile based on your provided info
+<h2>Reverse proxy setup - automatically creates a working caddyfile based on your provided info.</h2>
 ![wimpsscrn2](https://github.com/Xaque8787/WIMPS/assets/65569846/34ea2c89-75e6-4c40-b230-c01dcb4f8c8c)
-WIMPS main menu - can select multiple items, and can be ran multilpe times to add features as you build.
+<h2>WIMPS main menu - can select multiple items, and can be ran multilpe times to add features as you build.</h2>
