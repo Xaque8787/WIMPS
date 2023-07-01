@@ -38,12 +38,12 @@ Download the repository and unzip to any location. Run the install_script, which
 - this script will install these services/apps as pre requirements; pyton3, node.js, yarn, go, wget, 7zip
 
 # Screen Shots
-<b>Landing page with multiple services showing. Can be customized</b>
+Landing page with multiple services showing. Can be customized
 ![wimpsscrn1](https://github.com/Xaque8787/WIMPS/assets/65569846/56a5660e-eac4-45ef-bd72-39cfc06a989f)
-<b>Sonarr in iframe - not all servies work in iframe, if not they will load in new tab or window.</b>
+Sonarr in iframe - not all servies work in iframe, if not they will load in new tab or window.
 ![wimpsscrn4](https://github.com/Xaque8787/WIMPS/assets/65569846/03722a31-1fc5-43e3-8078-2f07f8920889)
-<b>Reverse proxy setup - automatically creates a working caddyfile based on your provided info.</b>
+Reverse proxy setup - automatically creates a working caddyfile based on your provided info.
 ![wimpsscrn3](https://github.com/Xaque8787/WIMPS/assets/65569846/fd5c661e-b187-4fe9-a1b8-6129e643cfc7)
-<b>WIMPS main menu - can select multiple items, and can be ran multilpe times to add features as you build.</b>
+WIMPS main menu - can select multiple items, and can be ran multilpe times to add features as you build.
 ![wimpsscrn2](https://github.com/Xaque8787/WIMPS/assets/65569846/34ea2c89-75e6-4c40-b230-c01dcb4f8c8c)
 
