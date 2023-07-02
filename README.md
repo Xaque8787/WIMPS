@@ -42,16 +42,15 @@ Download the repository and unzip to any location. Run the install_script, which
 WIMPSPortal landing page with multiple services showing. Can be customized.
 ![wimpsscrn1](https://github.com/Xaque8787/WIMPS/assets/65569846/dea76cb5-d0c9-4da7-846e-ec2813740fb6)
 Sonarr and qBittorrent examples
-
+![wimpsscrn5](https://github.com/Xaque8787/WIMPS/assets/65569846/64699b4c-2751-4b45-995f-36ffd923075a)
+![wimpsscrn4](https://github.com/Xaque8787/WIMPS/assets/65569846/237918d7-561f-4225-9347-ccd852d71ca6)
 Reverse proxy setup - automatically creates a working caddyfile based on your provided info.
-
+![wimpsscrn3](https://github.com/Xaque8787/WIMPS/assets/65569846/81fe4acf-c096-4043-a0cc-137f83c69692)
 WIMPS main menu - you can select multiple items before running install command, and WIMPS can be ran multilpe times to add features as you build out your server.
 ![wimpsscrn6](https://github.com/Xaque8787/WIMPS/assets/65569846/238dce3c-e4ce-4b18-811e-9a5b002c3f3d)
-![wimpsscrn4](https://github.com/Xaque8787/WIMPS/assets/65569846/237918d7-561f-4225-9347-ccd852d71ca6)
-![wimpsscrn6](https://github.com/Xaque8787/WIMPS/assets/65569846/1fa86844-bdcf-49d3-aa8b-12541f66125c)
-![wimpsscrn5](https://github.com/Xaque8787/WIMPS/assets/65569846/64699b4c-2751-4b45-995f-36ffd923075a)
 
-![wimpsscrn3](https://github.com/Xaque8787/WIMPS/assets/65569846/81fe4acf-c096-4043-a0cc-137f83c69692)
+
+
 
 ![wimpsscrn2](https://github.com/Xaque8787/WIMPS/assets/65569846/9d4aa142-c00c-4bc7-9a38-c71eeea53e14)
 
