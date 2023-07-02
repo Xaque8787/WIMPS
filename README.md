@@ -1,4 +1,4 @@
-![wimpsscrn6](https://github.com/Xaque8787/WIMPS/assets/65569846/238dce3c-e4ce-4b18-811e-9a5b002c3f3d)
+
 # WIMPS
 **W**indows **I**s **M**y **P**rimary **S**erver is a set of scripts to help automate a media server setup on Windows.
 <p align="center" width="100%">
@@ -46,7 +46,7 @@ Sonarr and qBittorrent examples
 Reverse proxy setup - automatically creates a working caddyfile based on your provided info.
 
 WIMPS main menu - you can select multiple items before running install command, and WIMPS can be ran multilpe times to add features as you build out your server.
-
+![wimpsscrn6](https://github.com/Xaque8787/WIMPS/assets/65569846/238dce3c-e4ce-4b18-811e-9a5b002c3f3d)
 ![wimpsscrn4](https://github.com/Xaque8787/WIMPS/assets/65569846/237918d7-561f-4225-9347-ccd852d71ca6)
 ![wimpsscrn6](https://github.com/Xaque8787/WIMPS/assets/65569846/1fa86844-bdcf-49d3-aa8b-12541f66125c)
 ![wimpsscrn5](https://github.com/Xaque8787/WIMPS/assets/65569846/64699b4c-2751-4b45-995f-36ffd923075a)
