@@ -45,6 +45,7 @@ Sonarr and qBittorrent examples
 ![wimpsscrn5](https://github.com/Xaque8787/WIMPS/assets/65569846/deb6ead6-0d4c-4bf4-86ba-91031e8a846d)
 Reverse proxy setup - automatically creates a working caddyfile based on your provided info.
 ![wimpsscrn3](https://github.com/Xaque8787/WIMPS/assets/65569846/fd5c661e-b187-4fe9-a1b8-6129e643cfc7)
-WIMPS main menu - can select multiple items, and can be ran multilpe times to add features as you build.
-![wimpsscrn2](https://github.com/Xaque8787/WIMPS/assets/65569846/34ea2c89-75e6-4c40-b230-c01dcb4f8c8c)
+WIMPS main menu - you can select multiple items before running install, and can be ran multilpe times to add features as you build out your server.
+![wimpsscrn6](https://github.com/Xaque8787/WIMPS/assets/65569846/9751dfae-75c0-48ab-aba7-5cbb5416120d)
+
 
