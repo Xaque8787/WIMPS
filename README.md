@@ -52,9 +52,4 @@ WIMPS main menu - you can select multiple items before running install command, 
 
 
 
-![wimpsscrn2](https://github.com/Xaque8787/WIMPS/assets/65569846/9d4aa142-c00c-4bc7-9a38-c71eeea53e14)
-
-
-
-
 
