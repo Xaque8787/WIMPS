@@ -79,14 +79,7 @@
     <p>Domain name if wanting to redirect duckdns urls, should have signle ssl cert per subdomain, not sure if wildcard subdomain will work.So you could redirect jellyfin.yoursubdomain.com to coolmediaserverr.duckdns.org so users can use a cleaner URL</p>
     <p>OpenSubtitles account to use in Jellyfin, not necessary but nice. May need opensubtitles plugin from github to get the latest merge that allows .strm files to download subs (you're welcome)</p>
     
-    <h2>iFrame Issues</h2>
-    <p>Some services <b>do not load in the webportal iframe</b>, they will open in a new tab or window. If you're having an issue with a service displaying in the iframe see the below service for more details.</p>
-    <p>You can edit portal.html loacated at %homepath%\wimps\installers\webportal\portal.html, and add services to the iframe exempt list, if you prefer that behavior or cant get a service to load in the iframe.<p>At line 110</p>
-    <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin'];</blockquote>
-
-    <p>can be expanded to include other services. Such as</p>
-
-<blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin', 'qBittorrent'];</blockquote>
+    
 
 <h1><u>M3UParser</u></h1>
     <h2>M3UParserrun.bat</h2>
@@ -103,6 +96,7 @@
 <h1><u>qBittorrent</u></h1>
     <p>To properly get qBittorrent to display in the iframe</p>
     <p>qBittorrent > tools > options > webui > uncheck clickjacking protection and if using the webportal from a different machine then uncheck Enable Cross-Site Request Forgery Protection</p>
+    <p>qBittorrent > tools > options > webui > Check 'Bypas autheication for localhost'
     <p><b>Change the port to 8081</b>, as that is what the webportal is looking for</p>
     <p>If using Proton VPN, set up split tunneling(see below) then apply in qBittorrent by going to qbittorrent > tools > options > network adapter > ProtonVPN</p>
 <h1><u>SABNZB</u></h1>
@@ -179,6 +173,14 @@
     <h2>Useful plugins(tutorials for below soon to come)</h2>
     <p>Network Event Sender/Reciever - great for sending commands from pc to pc in local network. Install reciever on hedless server, install sender on your main pc.</p>
     <p>Auto-Remote Tasker - can send commands to server from out of local network. Great for restarting services with your phone while out and about</p>
+    <h2>iFrame Issues</h2>
+    <p>Some services <b>do not load in the webportal iframe</b>, they will open in a new tab or window. If you're having an issue with a service displaying in the iframe see the below service for more details.</p>
+    <p>You can edit portal.html loacated at %homepath%\wimps\installers\webportal\portal.html, and add services to the iframe exempt list, if you prefer that behavior or cant get a service to load in the iframe.<p>At line 110</p>
+    <blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin'];</blockquote>
+
+    <p>can be expanded to include other services. Such as</p>
+
+<blockquote>var iframeExceptions = ['Jellyseerr', 'Threadfin', 'qBittorrent'];</blockquote>
   </div>
 </body>
 </html>
