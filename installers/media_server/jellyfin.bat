@@ -15,8 +15,8 @@ xcopy /s /i /y "jellyfin_10.8.10" "%PROGRAMFILES%\Jellyfin\Server"
 
 cd "%PROGRAMFILES%\Jellyfin\Server"
 call nssm.exe install JellyfinServer "%PROGRAMFILES%\Jellyfin\Server\jellyfin.exe" --service --datadir "%PROGRAMDATA%\Jellyfin"
-call nssm.exe set JellyfinServer Type SERVICE_INTERACTIVE_PROCESS
 call nssm.exe start JellyfinServer
+call nssm.exe set JellyfinServer Type SERVICE_INTERACTIVE_PROCESS
 cd %~dp0
 rmdir /s /q "%~dp0jellyfin_10.8.10"
 del /s "%~dp0jellyfin_10.8.10.zip"
