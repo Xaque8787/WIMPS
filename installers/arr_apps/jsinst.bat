@@ -9,7 +9,6 @@ cd %HOMEPATH%\jellyseerr-main
 call "%PROGRAMFILES%\nodejs\nodevars.bat"
 cd %HOMEPATH%\jellyseerr-main
 yarn install && yarn add typeorm@0.3.11 && yarn run build
-
 echo Run jellyseerr with 'jsrun' in command prompt.
 timeout 15
 exit /b
