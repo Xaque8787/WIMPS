@@ -48,6 +48,7 @@ echo oLink.Save >> CreateJellyfinStartMenuShortcut.vbs
 cscript /nologo CreateJellyfinStartMenuShortcut.vbs
 del CreateJellyfinStartMenuShortcut.vbs
 
+copy "%ShortcutFileStartMenu%" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
 copy "%ShortcutFileStartMenu%" "%userprofile%\Desktop"
 timeout 4
 exit /b
