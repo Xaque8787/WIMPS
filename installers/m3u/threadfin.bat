@@ -15,4 +15,5 @@ rem go run threadfin.go
 cd %~dp0
 timeout 3
 del main.zip
+copy threadfinrun.bat "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
 exit /b
