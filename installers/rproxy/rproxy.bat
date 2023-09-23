@@ -68,6 +68,13 @@ echo Configuration written to caddyfile.
 
 call caddy fmt --overwrite && call caddy adapt
 
+choice /M "Do you want to enable auto-start (Y/N)?"
+if errorlevel 2 (
+  echo User chose No
+) else (
+  echo User chose Yes
+  copy "caddyrun.bat" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
+)
 
 timeout 3
 exit /b
