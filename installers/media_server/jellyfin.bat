@@ -6,7 +6,7 @@ echo _(  )(  __)(  )  (  )  ( \/ )(  __)(  )(  ( \
 echo/ \) \ ) _) / (_/\/ (_/\ )  /  ) _)  )( /    /
 echo\____/(____)\____/\____/(__/  (__)  (__)\_)__)                                                                                 
 
-wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --no-check-certificate https://repo.jellyfin.org/releases/server/windows/stable/combined/jellyfin_10.8.10.zip
+wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --no-check-certificate https://repo.jellyfin.org/releases/server/windows/stable/combined/jellyfin_10.8.11.zip
 7z x "jellyfin_10.8.10.zip" -o%CD%
 mkdir "%PROGRAMFILES%\Jellyfin"
 mkdir "%PROGRAMFILES%\Jellyfin\Server"
