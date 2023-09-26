@@ -10,11 +10,11 @@ wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --
 7z x "jellyfin_10.8.10.zip" -o%CD%
 mkdir "%PROGRAMFILES%\Jellyfin"
 mkdir "%PROGRAMFILES%\Jellyfin\Server"
-xcopy /s /i /y "jellyfin_10.8.10" "%PROGRAMFILES%\Jellyfin\Server"
+xcopy /s /i /y "jellyfin_10.8.11" "%PROGRAMFILES%\Jellyfin\Server"
 
 cd %~dp0
-rmdir /s /q "%~dp0jellyfin_10.8.10"
-del /s "%~dp0jellyfin_10.8.10.zip"
+rmdir /s /q "%~dp0jellyfin_10.8.11"
+del /s "%~dp0jellyfin_10.8.11.zip"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Jellyfin"
 
 setlocal
