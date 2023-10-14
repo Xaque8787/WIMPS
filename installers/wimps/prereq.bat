@@ -8,7 +8,7 @@ echo(__)  (__\_)(____)   (__\_)(____)\__\)(____/
 
 
 wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --no-check-certificate -O 7zip.exe https://www.7-zip.org/a/7z2301-x64.exe
-wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --no-check-certificate -O python.exe  https://www.python.org/ftp/python/3.11.1/python-3.11.1-amd64.exe
+wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --no-check-certificate -O python.exe  https://www.python.org/ftp/python/3.13.0/python-3.13.0a1-amd64.exe
 wget -O node.msi https://nodejs.org/dist/v20.8.1/node-v20.8.1-x64.msi
 wget -O yarn.msi https://github.com/yarnpkg/yarn/releases/download/v1.22.19/yarn-1.22.19.msi
 wget -O go.msi https://go.dev/dl/go1.21.3.windows-amd64.msi
