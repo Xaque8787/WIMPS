@@ -11,11 +11,11 @@ set /p destination=<destination.cfg
 set /p vodurl=<vodurl.cfg
 
 wget -O m3u_file.m3u %vodurl%
-"%PROGRAMFILES%\Python311\python.exe" %HOMEPATH%\m3uparser\parser.py
+python.exe %HOMEPATH%\m3uparser\parser.py
 timeout 3
-"%PROGRAMFILES%\Python311\python.exe" %HOMEPATH%\m3uparser\moviemover.py
+python.exe %HOMEPATH%\m3uparser\moviemover.py
 timeout 5
-"%PROGRAMFILES%\Python311\python.exe" %HOMEPATH%\m3uparser\tvshowmover.py
+python.exe %HOMEPATH%\m3uparser\tvshowmover.py
 timeout 5
 cd %~dp0
 rmdir /s /q "%HOMEPATH%\m3uparser\Movie VOD"
