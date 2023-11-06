@@ -12,3 +12,4 @@ mkdir "%HOMEPATH%\unperr"
 del unpackerr.amd64.exe.zip
 cd "%HOMEPATH%\unperr"
 copy "unpackerr.amd64.exe" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
+exit /b
