@@ -1,6 +1,6 @@
 @echo off
 rem define the appnames
-set appnames=jellyfin radarr sonarr prowlarr jellyseerr qbittorrent sabnzb caddy protonvpn jfa eventghost noteplus prereqs duckdns m3uparser windirstat chrome firefox threadfin
+set appnames=jellyfin radarr sonarr prowlarr jellyseerr qbittorrent sabnzb caddy protonvpn jfa eventghost noteplus prereqs duckdns m3uparser windirstat chrome firefox threadfin notifiarr unpackerr
 setlocal enabledelayedexpansion
 
 :prereq
