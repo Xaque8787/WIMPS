@@ -12,3 +12,4 @@ mkdir "%HOMEPATH%\noterr"
 del notifiarr.amd64.exe.zip
 cd "%HOMEPATH%\noterr"
 copy "notifiarr.amd64.exe" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
+exit /b
