@@ -421,6 +421,52 @@ for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
         ))>temp.txt
         del mainlist.cfg
         ren temp.txt mainlist.cfg
+	goto notifiarr
+
+    )
+)
+
+:notifiarr
+for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
+    set "appname=%%a"
+    set "appvalue=%%b"
+    if "!appname!"=="notifiarr" (
+        echo Installing Notifiarr
+	start "" /wait /b cmd.exe /c ..\arr_apps\notifiarr.bat
+	cls
+	set "newline=!appname!=false"
+        (for /f "delims=" %%x in (mainlist.cfg) do (
+            if "%%x"=="!appname!=true" (
+                echo !newline!
+            ) else (
+                echo %%x
+            )
+        ))>temp.txt
+        del mainlist.cfg
+        ren temp.txt mainlist.cfg
+	goto unpackerrr
+
+    )
+)
+
+:unpackerr
+for /f "tokens=1,2 delims==" %%a in (appins.cfg) do (
+    set "appname=%%a"
+    set "appvalue=%%b"
+    if "!appname!"=="unpackerr" (
+        echo Installing Unpackerr
+	start "" /wait /b cmd.exe /c ..\arr_apps\unpackerr.bat
+	cls
+	set "newline=!appname!=false"
+        (for /f "delims=" %%x in (mainlist.cfg) do (
+            if "%%x"=="!appname!=true" (
+                echo !newline!
+            ) else (
+                echo %%x
+            )
+        ))>temp.txt
+        del mainlist.cfg
+        ren temp.txt mainlist.cfg
 	goto next
 
     )
