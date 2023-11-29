@@ -6,15 +6,15 @@ echo _(  )(  __)(  )  (  )  ( \/ )(  __)(  )(  ( \
 echo/ \) \ ) _) / (_/\/ (_/\ )  /  ) _)  )( /    /
 echo\____/(____)\____/\____/(__/  (__)  (__)\_)__)                                                                                 
 
-wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --no-check-certificate https://repo.jellyfin.org/releases/server/windows/stable/combined/jellyfin_10.8.12.zip
-7z x "jellyfin_10.8.12.zip" -o%CD%
+wget --retry-connrefused --read-timeout=20 --timeout=15 --tries=10 --continue --no-check-certificate https://repo.jellyfin.org/releases/server/windows/stable/combined/jellyfin_10.8.13.zip
+7z x "jellyfin_10.8.13.zip" -o%CD%
 mkdir "%PROGRAMFILES%\Jellyfin"
 mkdir "%PROGRAMFILES%\Jellyfin\Server"
-xcopy /s /i /y "jellyfin_10.8.12" "%PROGRAMFILES%\Jellyfin\Server"
+xcopy /s /i /y "jellyfin_10.8.13" "%PROGRAMFILES%\Jellyfin\Server"
 
 cd %~dp0
-rmdir /s /q "%~dp0jellyfin_10.8.12"
-del /s "%~dp0jellyfin_10.8.12.zip"
+rmdir /s /q "%~dp0jellyfin_10.8.13"
+del /s "%~dp0jellyfin_10.8.13.zip"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Jellyfin"
 
 setlocal
